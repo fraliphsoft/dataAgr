@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.fixed-table-container {
+	border: 0;
+}
+.fixed-table-container th, .fixed-table-container td {
+	border-left: 0px !important;
+	border-right: 0px !important;
+}
