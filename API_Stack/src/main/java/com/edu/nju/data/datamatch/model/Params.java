@@ -1,4 +1,4 @@
-package applicationIntegration.model;
+package com.edu.nju.data.datamatch.model;
 
 public class Params {
 

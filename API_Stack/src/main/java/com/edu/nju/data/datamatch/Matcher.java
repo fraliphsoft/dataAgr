@@ -1,5 +1,7 @@
-import model.Methods;
-import applicationIntegration.model.StackOverflowPost;
+package com.edu.nju.data.datamatch;
+
+import com.edu.nju.data.datamatch.model.StackOverflowPost;
+import com.edu.nju.data.datamatch.model.Methods;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

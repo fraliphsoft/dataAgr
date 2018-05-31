@@ -1,6 +1,8 @@
-import model.Methods;
-import applicationIntegration.model.SoExample;
-import applicationIntegration.model.StackOverflowPost;
+package com.edu.nju.data.datamatch;
+
+import com.edu.nju.data.datamatch.model.Methods;
+import com.edu.nju.data.datamatch.model.SoExample;
+import com.edu.nju.data.datamatch.model.StackOverflowPost;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,7 +39,7 @@ public class Main {
             System.out.println("---" + m.getMid() + ": " + allMatchedPosts.size() + "---");
         }
         System.out.println("examples size: " + count);
-//        storeAllMatchedResult(examples);
+        storeAllMatchedResult(examples);
     }
 
     /**

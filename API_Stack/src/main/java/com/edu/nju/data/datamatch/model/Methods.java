@@ -1,4 +1,4 @@
-package model;
+package com.edu.nju.data.datamatch.model;
 
 public class Methods {
 
