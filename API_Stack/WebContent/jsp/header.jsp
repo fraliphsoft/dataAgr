@@ -6,17 +6,17 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		
-		<link href="/API_Stack/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
-		<link href="/API_Stack/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"></link>
-		<link href="/API_Stack/css/bootstrap-table.min.css" rel="stylesheet" type="text/css"></link>
-		<link href="/API_Stack/css/style.css" rel="stylesheet" type="text/css"></link>
-		<link href="/API_Stack/css/table.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/bootstrap-table.min.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/style.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/table.css" rel="stylesheet" type="text/css"></link>
 		
-		<script type="text/javascript" src="/API_Stack/js/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="/API_Stack/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/API_Stack/js/bootstrap-table.min.js"></script>
-		<script type="text/javascript" src="/API_Stack/js/bootstrap-table-zh-CN.min.js"></script>
-		<script type="text/javascript" src="/API_Stack/js/dataImporter.js"></script>
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-table.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-table-zh-CN.min.js"></script>
+		<script type="text/javascript" src="../js/dataImporter.js"></script>
 		<title>WOW</title>
 	</head>
 	
