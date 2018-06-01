@@ -23,6 +23,8 @@
 	<body>
 		<div class="navBoard">
 			<div class="nav">
-				
+				<div class='libSearch'>
+					<div class=>
+				</div>
 			</div>
 		</div>
