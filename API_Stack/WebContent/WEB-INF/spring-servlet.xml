@@ -14,7 +14,7 @@
         ">  
   	<!-- scan the package and the sub package -->
 
-	<context:component-scan base-package="com.edu.nju"/>
+	<context:component-scan base-package="main.java.com.edu.nju"/>
   
      <!-- don't handle the static resource -->  
     <mvc:default-servlet-handler />  
@@ -45,7 +45,7 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		 <property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.edu.nju" />
+		<property name="packagesToScan" value="main.java.com.edu.nju" />
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
@@ -92,7 +92,7 @@
 	<aop:config>
 		<!-- 只对业务逻辑层实施事务 -->
 		<aop:pointcut id="serviceOperation"
-			expression="execution( * com.edu.nju.service..*Service.*(..))" />
+			expression="execution( * main.java.com.edu.nju.service..*Service.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
 	</aop:config>
 	
