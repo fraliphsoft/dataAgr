@@ -1,28 +1,68 @@
+var fsList = undefined;
+var mongodbList = undefined;
+var lodashList = undefined;
+
+var table;
+
 function initTable(tableEle) {
-	$(tableEle).bootstrapTable({
+	table = tableEle;
+	fsList = getFsMethods();
+	loadTable(fsList);
+}
+
+function changeDataSource(libName) {
+	var data;
+	if (libName == 'fs') {
+		if (fsList == undefined) {
+			fsList = getFsMethods();
+		}
+		data = fsList;
+	} else if (libName == 'mongodb') {
+		if (mongodbList == undefined) {
+			mongodbList = getMongodbMethods();
+		}
+		data = mongodbList;
+	} else {
+		if (lodashList == undefined) {
+			lodashList = getLodashMethods();
+		}
+		data = lodashList;
+	}
+	loadTable(data);
+}
+
+function loadTable(data) {
+	$(table).bootstrapTable({
 		columns : [ {
-			field : 'id',
-			title : 'Item ID'
+			field : 'mid',
+			visible: false
 		}, {
-			field : 'name',
-			title : 'Item Name'
+			field : 'cname',
+			title : 'Class'
 		}, {
-			field : 'price',
-			title : 'Item Price'
+			field : 'mname',
+			title : 'Method'
+		}, {
+			fiels : 'descrip',
+			title : 'Description'
 		} ],
-		data : [ {
-			id : 1,
-			name : 'Item 1',
-			price : '$1'
-		}, {
-			id : 2,
-			name : 'Item 2',
-			price : '$2'
-		} ],
+		data : data,
 		pagination : true,
 		search : true,
 		onClickRow : function(row, $element, field) {
-			alert(row.id);
+			alert(row.mid);
 		}
 	});
+}
+
+function getFsMethods() {
+	return [{"mid":1, "cname":"fs", "mname":"yes", "descrip":"wwwwww"}];
+}
+
+function getMongodbMethods() {
+	return [{"mid":1, "cname":"mongodb", "mname":"yes", "descrip":"wwwwww"}];
+}
+
+function getLodashMethods() {
+	return [{"mid":1, "cname":"lodash", "mname":"yes", "descrip":"wwwwww"}];
 }
