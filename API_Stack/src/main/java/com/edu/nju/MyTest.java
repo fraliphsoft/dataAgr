@@ -18,11 +18,11 @@ public class MyTest {
 
 
     @Autowired
-    private Dao userDao;
+    private Dao dao;
 
     @Test
     public void test1() {
-        List<Example> list = userDao.getExample(82);
+        List<Example> list = dao.getExample(82);
         System.out.println(list.size());
     }
 
