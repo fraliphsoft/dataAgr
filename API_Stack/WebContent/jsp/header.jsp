@@ -23,8 +23,20 @@
 	<body>
 		<div class="navBoard">
 			<div class="nav">
-				<div class='libSearch'>
-					<div class=>
+				<div class="libSearch">
+					<div class="input-group-addon">当前库:</div>
+					<div class="btn-group input-group-btn">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<div id="currentLib" style="display:inline-block;">fs</div><span class="caret" style="float:right;margin-top:7px;"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a  href="#" onclick="changeDataSource('fs')">fs</a></li>
+							<li class="divider"></li>
+							<li><a href="#" onclick="changeDataSource('mongodb')">mongodb</a></li>
+							<li class="divider"></li>
+							<li><a href="#" onclick="changeDataSource('lodash')">lodash</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
