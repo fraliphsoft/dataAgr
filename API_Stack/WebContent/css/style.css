@@ -28,3 +28,12 @@ body {
 	
 	padding: 20px;
 }
+
+.libSearch {
+	margin-left: 20px;
+	margin-top: 7px;
+	
+}
+.libSearch .btn-group, .libSearch .dropdown-toggle {
+	width: 150px;
+}

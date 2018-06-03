@@ -13,16 +13,19 @@ function initTable(tableEle) {
 function changeDataSource(libName) {
 	var data;
 	if (libName == 'fs') {
+		$("#currentLib").html("fs");
 		if (fsList == undefined) {
 			fsList = getFsMethods();
 		}
 		data = fsList;
 	} else if (libName == 'mongodb') {
+		$("#currentLib").html("mongodb");
 		if (mongodbList == undefined) {
 			mongodbList = getMongodbMethods();
 		}
 		data = mongodbList;
 	} else {
+		$("#currentLib").html("lodash");
 		if (lodashList == undefined) {
 			lodashList = getLodashMethods();
 		}
@@ -32,6 +35,7 @@ function changeDataSource(libName) {
 }
 
 function loadTable(data) {
+	$(table).bootstrapTable("destroy");
 	$(table).bootstrapTable({
 		columns : [ {
 			field : 'mid',
