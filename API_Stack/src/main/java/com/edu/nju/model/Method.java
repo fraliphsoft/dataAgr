@@ -17,7 +17,7 @@ public class Method {
     //方法名
     private String name;
 
-    //方法调用模版
+    //方法签名
     private String signature;
 
     //方法描述
