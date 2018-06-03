@@ -54,19 +54,40 @@ function loadTable(data) {
 		pagination : true,
 		search : true,
 		onClickRow : function(row, $element, field) {
+			var url = "../?mid=" + row.mid;
+			$.get(url);
 			alert(row.mid);
 		}
 	});
 }
 
 function getFsMethods() {
-	return [{"mid":1, "cname":"fs", "mname":"yes", "descrip":"wwwwww"}];
+	return requestData("/API_Stack/fs/");
 }
 
 function getMongodbMethods() {
-	return [{"mid":1, "cname":"mongodb", "mname":"yes", "descrip":"wwwwww"}];
+	return requestData("/API_Stack/mongodb/");
 }
 
 function getLodashMethods() {
-	return [{"mid":1, "cname":"lodash", "mname":"yes", "descrip":"wwwwww"}];
+	return requestData("/API_Stack/lodash/");
+}
+
+function requestData(url) {
+	var data = new Array();
+	$.ajax({
+		type:		"Post",
+		url:		url,
+		contentType:"application/json",
+		dataType:	"json",
+		success:	function(result) {
+			data.push({
+				"mid" : result.mid,
+				"cname" : result.cname,
+				"mname" : result.mname,
+				"descrip" : result.description
+			});
+		}
+	});
+	return data;
 }
