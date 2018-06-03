@@ -75,6 +75,16 @@ public class Dao {
         return res;
     }
 
+    //通过methodID 获得Method
+    public Method getMethod(int methodID) {
+        Session session = getSession();
+        session.beginTransaction();
+
+        Method method = session.find(Method.class, methodID);
+        session.close();
+        return method;
+    }
+
     //通过方法ID获得Example列表
     public List<Example> getExample(int methodID) {
         Session session = getSession();

@@ -22,8 +22,8 @@ public class MyTest {
 
     @Test
     public void test1() {
-        List<Example> list = dao.getExample(82);
-        System.out.println(list.size());
+        Method method = dao.getMethod(82);
+        System.out.println(method.getName());
     }
 
 
