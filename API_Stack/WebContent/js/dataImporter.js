@@ -52,6 +52,8 @@ function loadTable(data) {
 		} ],
 		data : data,
 		pagination : true,
+		pageSize : 20,
+		pageList : [20],
 		search : true,
 		onClickRow : function(row, $element, field) {
 			var url = "../?mid=" + row.mid;
