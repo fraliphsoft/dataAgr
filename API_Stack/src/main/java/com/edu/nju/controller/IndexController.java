@@ -5,6 +5,7 @@ import com.edu.nju.model.Method;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.edu.nju.dao.Dao;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,13 +16,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-@RestController
+@Controller
 public class IndexController {
     @Autowired
     private Dao dao;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getxxx(@RequestParam(name = "mid") long mid, HttpServletRequest request) {
+    public String convertToExamples(@RequestParam(name = "mid") long mid, HttpServletRequest request) {
         request.getSession().setAttribute("mid", mid);
         return "examples";
     }
