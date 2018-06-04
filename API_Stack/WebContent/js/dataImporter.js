@@ -56,8 +56,8 @@ function loadTable(data) {
 		pageList : [20],
 		search : true,
 		onClickRow : function(row, $element, field) {
-			var url = "../?mid=" + row.mid;
-			$.get(url);
+			var url = "../API_Stack/?mid=" + row.mid;
+			window.location.href = url;
 		}
 	});
 }
@@ -91,6 +91,9 @@ function requestData(url) {
 					"descrip" : val.description
 				});
 			});
+		},
+		error:		function(result) {
+			console.log(result);
 		}
 	});
 	return data;

@@ -1,1 +1,7 @@
 @charset "UTF-8";
+
+#examplesBoard {
+	height: 95%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}

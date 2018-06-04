@@ -18,8 +18,8 @@ public class IndexController {
     @Autowired
     private Dao dao;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String convertToExamples(@RequestParam(name = "mid") long mid, HttpServletRequest request) {
+    @RequestMapping(value = "/API_Stack", method = RequestMethod.GET)
+    public String convertToExamples(@RequestParam(name = "mid") int mid, HttpServletRequest request) {
         request.getSession().setAttribute("mid", mid);
         return "examples";
     }
