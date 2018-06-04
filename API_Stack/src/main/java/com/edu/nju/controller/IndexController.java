@@ -6,10 +6,7 @@ import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.edu.nju.dao.Dao;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -27,6 +24,7 @@ public class IndexController {
         return "examples";
     }
 
+    @ResponseBody
     @RequestMapping(value = "/fs", method = RequestMethod.POST)
     public String getFsMethods() {
 
@@ -43,6 +41,7 @@ public class IndexController {
         return gson.toJson(tempMethodList);
     }
 
+    @ResponseBody
     @RequestMapping(value = "/mongodb", method = RequestMethod.POST)
     public String getMongoDBMethods() {
         List<Method> methodList = dao.getMethodList("mongodb nodejs driver");
@@ -58,6 +57,7 @@ public class IndexController {
         return gson.toJson(tempMethodList);
     }
 
+    @ResponseBody
     @RequestMapping(value = "/lodash", method = RequestMethod.POST)
     public String getLodashDBMethods() {
         List<Method> methodList = dao.getMethodList("lodash");
