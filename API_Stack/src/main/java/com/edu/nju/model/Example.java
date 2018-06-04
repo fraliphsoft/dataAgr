@@ -95,7 +95,10 @@ public class Example {
     }
 
     public String[] getCodeList() {
-        codeList = code.split("\\(20080808\\)");
+        codeList = code.split("\\(20080808\\)(\r\n|\r|\n|\n\r)");
+        for (int i=0; i<codeList.length; i++) {
+        	codeList[i] = codeList[i].replaceAll("<code>", "").replaceAll("</code>", "");
+        }
         return codeList;
     }
 

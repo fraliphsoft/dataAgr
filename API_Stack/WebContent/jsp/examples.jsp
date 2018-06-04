@@ -13,7 +13,7 @@
 				for (int i=0; i<examples.size(); i++) {
 					Example e = examples.get(i);
 					out.println("<div class='exampleBoard panel panel-info'>");
-						out.println("<div class='exampleHeader panel-heading'>Example " + i+1 + "</div>");
+						out.println("<div class='exampleHeader panel-heading'>Example " + (i+1) + "</div>");
 						out.println("<div class='exampleContent panel-body'>");
 						for (String code:e.getCodeList()) {
 							out.println("<div class='codeFrag'><row>" + code.replaceAll("  ", "&emsp;").replaceAll("(\r\n|\r|\n|\n\r)", "</row><row>") + "</row></div>");
