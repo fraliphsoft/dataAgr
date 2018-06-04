@@ -5,3 +5,13 @@
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
+
+row {
+	display: block;
+}
+
+.codeFrag {
+	box-shadow: 1px 1px 1px inset rgba(0,0,0,0.5), -1px -1px 1px inset rgba(0,0,0,0.5);
+	margin-top: 20px;
+	padding: 15px;
+}
