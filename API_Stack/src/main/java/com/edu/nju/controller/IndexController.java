@@ -16,7 +16,6 @@ import java.util.Collection;
 import java.util.List;
 
 @RestController
-@RequestMapping("API_Stack")
 public class IndexController {
     @Autowired
     private Dao dao;
@@ -27,7 +26,7 @@ public class IndexController {
         return "examples";
     }
 
-    @RequestMapping(value = "/fs", method = RequestMethod.GET)
+    @RequestMapping(value = "/fs", method = RequestMethod.POST)
     public String getFsMethods() {
 
         List<Method> methodList = dao.getMethodList("fs");

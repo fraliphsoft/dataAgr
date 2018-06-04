@@ -11,6 +11,7 @@
 		<link href="../css/bootstrap-table.min.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/style.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/table.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/examples.css" rel="stylesheet" type="text/css"></link>
 		
 		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
