@@ -56,7 +56,6 @@ function loadTable(data) {
 		onClickRow : function(row, $element, field) {
 			var url = "../?mid=" + row.mid;
 			$.get(url);
-			alert(row.mid);
 		}
 	});
 }
@@ -80,12 +79,15 @@ function requestData(url) {
 		url:		url,
 		contentType:"application/json",
 		dataType:	"json",
+		async:		false,
 		success:	function(result) {
-			data.push({
-				"mid" : result.mid,
-				"cname" : result.cname,
-				"mname" : result.mname,
-				"descrip" : result.description
+			$(result).each(function(index, val) {
+				data.push({
+					"mid" : val.mid,
+					"cname" : val.cname,
+					"mname" : val.mname,
+					"descrip" : val.description
+				});
 			});
 		}
 	});
