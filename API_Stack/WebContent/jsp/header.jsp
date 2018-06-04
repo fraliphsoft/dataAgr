@@ -9,6 +9,7 @@
 		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/bootstrap-table.min.css" rel="stylesheet" type="text/css"></link>
+		<link href="../css/prism.min.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/style.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/table.css" rel="stylesheet" type="text/css"></link>
 		<link href="../css/examples.css" rel="stylesheet" type="text/css"></link>
@@ -17,7 +18,9 @@
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap-table.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap-table-zh-CN.min.js"></script>
+		<script type="text/javascript" src="../js/prism.min.js"></script>
 		<script type="text/javascript" src="../js/dataImporter.js"></script>
+		<script type="text/javascript" src="../js/examples.js"></script>
 		<title>WOW</title>
 	</head>
 	

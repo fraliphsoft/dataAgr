@@ -14,10 +14,15 @@
 					Example e = examples.get(i);
 					out.println("<div class='exampleBoard'>");
 						out.println("<div class='exampleHeader'>Example " + i + "</div>");
-						out.println("<div class='exampleContent'>" + e.getCode() + "</div>");
+						out.println("<div class='exampleContent'>");
+						for (String code:e.getCodeList()) {
+							out.println("<div class='codeFrag'>" + code + "</div>");
+						}
+						out.println("</div>");
 						out.println("<div class='exampleFooter'></div>");
 					out.println("</div>");
 				}
+				out.println("<script>highlightRender();</script>");
 				session.removeAttribute("mid");
 			%>
 		</div>
