@@ -3,11 +3,10 @@ package com.edu.nju.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Entity
-@Table(name="so_example")
+@Table(name = "so_example")
 public class Example {
 
     @Id
@@ -96,10 +95,18 @@ public class Example {
 
     public String[] getCodeList() {
         codeList = code.split("\\(20080808\\)(\r\n|\r|\n|\n\r)");
-        for (int i=0; i<codeList.length; i++) {
-        	codeList[i] = codeList[i].replaceAll("<code>", "").replaceAll("</code>", "");
+        for (int i = 0; i < codeList.length; i++) {
+            codeList[i] = codeList[i].replaceAll("<code>", "").replaceAll("</code>", "");
         }
-        return codeList;
+
+        //get rid of duplicates
+        Set<String> codeSet = new TreeSet<String>(Arrays.asList(codeList));
+        String[] unDuplicatedList = new String[codeSet.size()];
+        int i = 0;
+        for (String s : codeSet) {
+            unDuplicatedList[i++] = s;
+        }
+        return unDuplicatedList;
     }
 
     public void setCodeList(String[] codeList) {

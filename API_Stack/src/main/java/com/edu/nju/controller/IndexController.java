@@ -1,6 +1,7 @@
 package com.edu.nju.controller;
 
 
+import com.edu.nju.model.Example;
 import com.edu.nju.model.Method;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -19,8 +21,9 @@ public class IndexController {
     private Dao dao;
 
     @RequestMapping(value = "/API_Stack", method = RequestMethod.GET)
-    public String convertToExamples(@RequestParam(name = "mid") int mid, HttpServletRequest request) {
-        request.getSession().setAttribute("mid", mid);
+    public String convertToExamples(@RequestParam(name = "mid") int mid, HttpServletRequest request, HttpServletResponse response) {
+        List<Example> examples = dao.getExample(mid);
+        request.getSession().setAttribute("examples", examples);
         return "examples";
     }
 
@@ -31,7 +34,7 @@ public class IndexController {
         List<Method> methodList = dao.getMethodList("fs");
         List<tempMethod> tempMethodList = new ArrayList<>();
         for (Method method : methodList) {
-            long mid = method.getMid();
+            int mid = method.getMid();
             String cname = method.getMethod_class();
             String mname = method.getName();
             String description = method.getDesc();
@@ -47,7 +50,7 @@ public class IndexController {
         List<Method> methodList = dao.getMethodList("mongodb nodejs driver");
         List<tempMethod> tempMethodList = new ArrayList<>();
         for (Method method : methodList) {
-            long mid = method.getMid();
+            int mid = method.getMid();
             String cname = method.getMethod_class();
             String mname = method.getName();
             String description = method.getDesc();
@@ -63,7 +66,7 @@ public class IndexController {
         List<Method> methodList = dao.getMethodList("lodash");
         List<tempMethod> tempMethodList = new ArrayList<>();
         for (Method method : methodList) {
-            long mid = method.getMid();
+            int mid = method.getMid();
             String cname = method.getMethod_class();
             String mname = method.getName();
             String description = method.getDesc();
@@ -77,12 +80,12 @@ public class IndexController {
 }
 
 class tempMethod {
-    private long mid;
+    private int mid;
     private String cname;
     private String mname;
     private String description;
 
-    public tempMethod(long mid, String cname, String mname, String description) {
+    public tempMethod(int mid, String cname, String mname, String description) {
         this.mid = mid;
         this.cname = cname;
         this.mname = mname;
