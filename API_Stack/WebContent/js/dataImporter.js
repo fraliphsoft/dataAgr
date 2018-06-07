@@ -35,6 +35,10 @@ function changeDataSource(libName) {
 }
 
 function loadTable(data) {
+	var boardHeight = parseInt($(".contentBoard").css("height"));
+	var recordNum = Math.floor((boardHeight-200) / 40);
+	console.log(boardHeight);
+	console.log(recordNum);
 	$(table).bootstrapTable("destroy");
 	$(table).bootstrapTable({
 		columns : [ {
@@ -52,8 +56,8 @@ function loadTable(data) {
 		} ],
 		data : data,
 		pagination : true,
-		pageSize : 20,
-		pageList : [20],
+		pageSize : recordNum,
+		pageList : [recordNum],
 		search : true,
 		onClickRow : function(row, $element, field) {
 			var url = "../API_Stack/?mid=" + row.mid;
