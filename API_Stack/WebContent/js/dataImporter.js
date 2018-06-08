@@ -11,6 +11,10 @@ function initTable(tableEle) {
 }
 
 function changeDataSource(libName) {
+	if (!window.location.href
+			.match(/http:\/\/localhost:8080\/API_Stack\/jsp\/index.jsp[]*/)) {
+		window.location.href = "/API_Stack/jsp/index.jsp";
+	}
 	var data;
 	if (libName == 'fs') {
 		$("#currentLib").html("fs");
@@ -35,15 +39,13 @@ function changeDataSource(libName) {
 }
 
 function loadTable(data) {
-	var boardHeight = parseInt($(".contentBoard").css("height"));
-	var recordNum = Math.floor((boardHeight-200) / 40);
-	console.log(boardHeight);
-	console.log(recordNum);
+	// var boardHeight = parseInt($(".contentBoard").css("height"));
+	// var recordNum = Math.floor((boardHeight-200) / 40);
 	$(table).bootstrapTable("destroy");
 	$(table).bootstrapTable({
 		columns : [ {
 			field : 'mid',
-			visible: false
+			visible : false
 		}, {
 			field : 'cname',
 			title : 'Class'
@@ -55,9 +57,9 @@ function loadTable(data) {
 			title : 'Description'
 		} ],
 		data : data,
-		pagination : true,
-		pageSize : recordNum,
-		pageList : [recordNum],
+		pagination : false,
+		// pageSize : recordNum,
+		// pageList : [recordNum],
 		search : true,
 		onClickRow : function(row, $element, field) {
 			var url = "../API_Stack/?mid=" + row.mid;
@@ -81,12 +83,12 @@ function getLodashMethods() {
 function requestData(url) {
 	var data = new Array();
 	$.ajax({
-		type:		"Post",
-		url:		url,
-		contentType:"application/json",
-		dataType:	"json",
-		async:		false,
-		success:	function(result) {
+		type : "Post",
+		url : url,
+		contentType : "application/json",
+		dataType : "json",
+		async : false,
+		success : function(result) {
 			$(result).each(function(index, val) {
 				data.push({
 					"mid" : val.mid,
@@ -96,7 +98,7 @@ function requestData(url) {
 				});
 			});
 		},
-		error:		function(result) {
+		error : function(result) {
 			console.log(result);
 		}
 	});
