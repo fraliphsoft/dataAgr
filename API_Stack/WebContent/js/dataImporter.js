@@ -51,7 +51,7 @@ function loadTable(data) {
 			field : 'mname',
 			title : 'Method'
 		}, {
-			fiels : 'descrip',
+			field : 'descrip',
 			title : 'Description'
 		} ],
 		data : data,
