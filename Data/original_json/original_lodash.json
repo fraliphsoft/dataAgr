@@ -1,0 +1,3741 @@
+{
+ "name": "lodash",
+ "methods": [
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to process."
+    },
+    {
+     "desc": "[size=1] (number): The length of each chunk"
+    }
+   ],
+   "desc": "Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.",
+   "signature": "_.chunk(array, [size=1])",
+   "return": "(Array): Returns the new array of chunks."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to compact."
+    }
+   ],
+   "desc": "Creates an array with all falsey values removed. The values false, null, 0, \"\", undefined, and NaN are falsey.",
+   "signature": "_.compact(array)",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to concatenate."
+    },
+    {
+     "desc": "[values] (...*): The values to concatenate."
+    }
+   ],
+   "desc": "Creates a new array concatenating array with any additional arrays and/or values.",
+   "signature": "_.concat(array, [values])",
+   "return": "(Array): Returns the new concatenated array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[values] (...Array): The values to exclude."
+    }
+   ],
+   "desc": "Creates an array of array values not included in the other given arrays using SameValueZero for equality comparisons. The order and references of result values are determined by the first array.\nNote: Unlike _.pullAll, this method returns a new array.",
+   "signature": "_.difference(array, [values])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[values] (...Array): The values to exclude."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.difference except that it accepts iteratee which is invoked for each element of array and values to generate the criterion by which they're compared. The order and references of result values are determined by the first array. The iteratee is invoked with one argument:\n(value).\nNote: Unlike _.pullAllBy, this method returns a new array.",
+   "signature": "_.differenceBy(array, [values], [iteratee=_.identity])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[values] (...Array): The values to exclude."
+    },
+    {
+     "desc": "[comparator] (Function): The comparator invoked per element."
+    }
+   ],
+   "desc": "This method is like _.difference except that it accepts comparator which is invoked to compare elements of array to values. The order and references of result values are determined by the first array. The comparator is invoked with two arguments: (arrVal, othVal).\nNote: Unlike _.pullAllWith, this method returns a new array.",
+   "signature": "_.differenceWith(array, [values], [comparator])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[n=1] (number): The number of elements to drop."
+    }
+   ],
+   "desc": "Creates a slice of array with n elements dropped from the beginning.",
+   "signature": "_.drop(array, [n=1])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[n=1] (number): The number of elements to drop."
+    }
+   ],
+   "desc": "Creates a slice of array with n elements dropped from the end.",
+   "signature": "_.dropRight(array, [n=1])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates a slice of array excluding elements dropped from the end. Elements are dropped until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).",
+   "signature": "_.dropRightWhile(array, [predicate=_.identity])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates a slice of array excluding elements dropped from the beginning. Elements are dropped until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).",
+   "signature": "_.dropWhile(array, [predicate=_.identity])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to fill."
+    },
+    {
+     "desc": "value (*): The value to fill array with."
+    },
+    {
+     "desc": "[start=0] (number): The start position."
+    },
+    {
+     "desc": "[end=array.length] (number): The end position."
+    }
+   ],
+   "desc": "Fills elements of array with value from start up to, but not including, end.\nNote: This method mutates array.",
+   "signature": "_.fill(array, value, [start=0], [end=array.length])",
+   "return": "(Array): Returns array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[fromIndex=0] (number): The index to search from."
+    }
+   ],
+   "desc": "This method is like _.find except that it returns the index of the first element predicate returns truthy for instead of the element itself.",
+   "signature": "_.findIndex(array, [predicate=_.identity], [fromIndex=0])",
+   "return": "(number): Returns the index of the found element, else -1."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[fromIndex=array.length-1] (number): The index to search from."
+    }
+   ],
+   "desc": "This method is like _.findIndex except that it iterates over elements of collection from right to left.",
+   "signature": "_.findLastIndex(array, [predicate=_.identity], [fromIndex=array.length-1])",
+   "return": "(number): Returns the index of the found element, else -1."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to flatten."
+    }
+   ],
+   "desc": "Flattens array a single level deep.",
+   "signature": "_.flatten(array)",
+   "return": "(Array): Returns the new flattened array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to flatten."
+    }
+   ],
+   "desc": "Recursively flattens array.",
+   "signature": "_.flattenDeep(array)",
+   "return": "(Array): Returns the new flattened array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to flatten."
+    },
+    {
+     "desc": "[depth=1] (number): The maximum recursion depth."
+    }
+   ],
+   "desc": "Recursively flatten array up to depth times.",
+   "signature": "_.flattenDepth(array, [depth=1])",
+   "return": "(Array): Returns the new flattened array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "pairs (Array): The key-value pairs."
+    }
+   ],
+   "desc": "The inverse of _.toPairs; this method returns an object composed from key-value pairs.",
+   "signature": "_.fromPairs(pairs)",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    }
+   ],
+   "desc": "Gets the first element of array.",
+   "signature": "_.head(array)",
+   "return": "_.first"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "value (*): The value to search for."
+    },
+    {
+     "desc": "[fromIndex=0] (number): The index to search from."
+    }
+   ],
+   "desc": "Gets the index at which the first occurrence of value is found in array using SameValueZero for equality comparisons. If fromIndex is negative, it's used as the offset from the end of array.",
+   "signature": "_.indexOf(array, value, [fromIndex=0])",
+   "return": "(number): Returns the index of the matched value, else -1."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    }
+   ],
+   "desc": "Gets all but the last element of array.",
+   "signature": "_.initial(array)",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    }
+   ],
+   "desc": "Creates an array of unique values that are included in all given arrays using SameValueZero for equality comparisons. The order and references of result values are determined by the first array.",
+   "signature": "_.intersection([arrays])",
+   "return": "(Array): Returns the new array of intersecting values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.intersection except that it accepts iteratee which is invoked for each element of each arrays to generate the criterion by which they're compared. The order and references of result values are determined by the first array. The iteratee is invoked with one argument:\n(value).",
+   "signature": "_.intersectionBy([arrays], [iteratee=_.identity])",
+   "return": "(Array): Returns the new array of intersecting values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    },
+    {
+     "desc": "[comparator] (Function): The comparator invoked per element."
+    }
+   ],
+   "desc": "This method is like _.intersection except that it accepts comparator which is invoked to compare elements of arrays. The order and references of result values are determined by the first array. The comparator is invoked with two arguments: (arrVal, othVal).",
+   "signature": "_.intersectionWith([arrays], [comparator])",
+   "return": "(Array): Returns the new array of intersecting values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to convert."
+    },
+    {
+     "desc": "[separator=','] (string): The element separator."
+    }
+   ],
+   "desc": "Converts all elements in array into a string separated by separator.",
+   "signature": "_.join(array, [separator=','])",
+   "return": "(string): Returns the joined string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    }
+   ],
+   "desc": "Gets the last element of array.",
+   "signature": "_.last(array)",
+   "return": "(*): Returns the last element of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "value (*): The value to search for."
+    },
+    {
+     "desc": "[fromIndex=array.length-1] (number): The index to search from."
+    }
+   ],
+   "desc": "This method is like _.indexOf except that it iterates over elements of array from right to left.",
+   "signature": "_.lastIndexOf(array, value, [fromIndex=array.length-1])",
+   "return": "(number): Returns the index of the matched value, else -1."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[n=0] (number): The index of the element to return."
+    }
+   ],
+   "desc": "Gets the element at index n of array. If n is negative, the nth element from the end is returned.",
+   "signature": "_.nth(array, [n=0])",
+   "return": "(*): Returns the nth element of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    },
+    {
+     "desc": "[values] (...*): The values to remove."
+    }
+   ],
+   "desc": "Removes all given values from array using SameValueZero for equality comparisons.\nNote: Unlike _.without, this method mutates array. Use _.remove to remove elements from an array by predicate.",
+   "signature": "_.pull(array, [values])",
+   "return": "(Array): Returns array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    },
+    {
+     "desc": "values (Array): The values to remove."
+    }
+   ],
+   "desc": "This method is like _.pull except that it accepts an array of values to remove.\nNote: Unlike _.difference, this method mutates array.",
+   "signature": "_.pullAll(array, values)",
+   "return": "(Array): Returns array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    },
+    {
+     "desc": "values (Array): The values to remove."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.pullAll except that it accepts iteratee which is invoked for each element of array and values to generate the criterion by which they're compared. The iteratee is invoked with one argument: (value).\nNote: Unlike _.differenceBy, this method mutates array.",
+   "signature": "_.pullAllBy(array, values, [iteratee=_.identity])",
+   "return": "(Array): Returns array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    },
+    {
+     "desc": "values (Array): The values to remove."
+    },
+    {
+     "desc": "[comparator] (Function): The comparator invoked per element."
+    }
+   ],
+   "desc": "This method is like _.pullAll except that it accepts comparator which is invoked to compare elements of array to values. The comparator is invoked with two arguments: (arrVal, othVal).\nNote: Unlike _.differenceWith, this method mutates array.",
+   "signature": "_.pullAllWith(array, values, [comparator])",
+   "return": "(Array): Returns array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    },
+    {
+     "desc": "[indexes] (...(number|number[])): The indexes of elements to remove."
+    }
+   ],
+   "desc": "Removes elements from array corresponding to indexes and returns an array of removed elements.\nNote: Unlike _.at, this method mutates array.",
+   "signature": "_.pullAt(array, [indexes])",
+   "return": "(Array): Returns the new array of removed elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Removes all elements from array that predicate returns truthy for and returns an array of the removed elements. The predicate is invoked with three arguments: (value, index, array).\nNote: Unlike _.filter, this method mutates array. Use _.pull to pull elements from an array by value.",
+   "signature": "_.remove(array, [predicate=_.identity])",
+   "return": "(Array): Returns the new array of removed elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to modify."
+    }
+   ],
+   "desc": "Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.\nNote: This method mutates array and is based on Array#reverse.",
+   "signature": "_.reverse(array)",
+   "return": "(Array): Returns array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to slice."
+    },
+    {
+     "desc": "[start=0] (number): The start position."
+    },
+    {
+     "desc": "[end=array.length] (number): The end position."
+    }
+   ],
+   "desc": "Creates a slice of array from start up to, but not including, end.\nNote: This method is used instead of Array#slice to ensure dense arrays are returned.",
+   "signature": "_.slice(array, [start=0], [end=array.length])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The sorted array to inspect."
+    },
+    {
+     "desc": "value (*): The value to evaluate."
+    }
+   ],
+   "desc": "Uses a binary search to determine the lowest index at which value should be inserted into array in order to maintain its sort order.",
+   "signature": "_.sortedIndex(array, value)",
+   "return": "(number): Returns the index at which value should be inserted into array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The sorted array to inspect."
+    },
+    {
+     "desc": "value (*): The value to evaluate."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.sortedIndex except that it accepts iteratee which is invoked for value and each element of array to compute their sort ranking. The iteratee is invoked with one argument: (value).",
+   "signature": "_.sortedIndexBy(array, value, [iteratee=_.identity])",
+   "return": "(number): Returns the index at which value should be inserted into array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "value (*): The value to search for."
+    }
+   ],
+   "desc": "This method is like _.indexOf except that it performs a binary search on a sorted array.",
+   "signature": "_.sortedIndexOf(array, value)",
+   "return": "(number): Returns the index of the matched value, else -1."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The sorted array to inspect."
+    },
+    {
+     "desc": "value (*): The value to evaluate."
+    }
+   ],
+   "desc": "This method is like _.sortedIndex except that it returns the highest index at which value should be inserted into array in order to maintain its sort order.",
+   "signature": "_.sortedLastIndex(array, value)",
+   "return": "(number): Returns the index at which value should be inserted into array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The sorted array to inspect."
+    },
+    {
+     "desc": "value (*): The value to evaluate."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.sortedLastIndex except that it accepts iteratee which is invoked for value and each element of array to compute their sort ranking. The iteratee is invoked with one argument: (value).",
+   "signature": "_.sortedLastIndexBy(array, value, [iteratee=_.identity])",
+   "return": "(number): Returns the index at which value should be inserted into array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "value (*): The value to search for."
+    }
+   ],
+   "desc": "This method is like _.lastIndexOf except that it performs a binary search on a sorted array.",
+   "signature": "_.sortedLastIndexOf(array, value)",
+   "return": "(number): Returns the index of the matched value, else -1."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    }
+   ],
+   "desc": "This method is like _.uniq except that it's designed and optimized for sorted arrays.",
+   "signature": "_.sortedUniq(array)",
+   "return": "(Array): Returns the new duplicate free array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[iteratee] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.uniqBy except that it's designed and optimized for sorted arrays.",
+   "signature": "_.sortedUniqBy(array, [iteratee])",
+   "return": "(Array): Returns the new duplicate free array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    }
+   ],
+   "desc": "Gets all but the first element of array.",
+   "signature": "_.tail(array)",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[n=1] (number): The number of elements to take."
+    }
+   ],
+   "desc": "Creates a slice of array with n elements taken from the beginning.",
+   "signature": "_.take(array, [n=1])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[n=1] (number): The number of elements to take."
+    }
+   ],
+   "desc": "Creates a slice of array with n elements taken from the end.",
+   "signature": "_.takeRight(array, [n=1])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates a slice of array with elements taken from the end. Elements are taken until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).",
+   "signature": "_.takeRightWhile(array, [predicate=_.identity])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to query."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates a slice of array with elements taken from the beginning. Elements are taken until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).",
+   "signature": "_.takeWhile(array, [predicate=_.identity])",
+   "return": "(Array): Returns the slice of array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    }
+   ],
+   "desc": "Creates an array of unique values, in order, from all given arrays using SameValueZero for equality comparisons.",
+   "signature": "_.union([arrays])",
+   "return": "(Array): Returns the new array of combined values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.union except that it accepts iteratee which is invoked for each element of each arrays to generate the criterion by which uniqueness is computed. Result values are chosen from the first array in which the value occurs. The iteratee is invoked with one argument:\n(value).",
+   "signature": "_.unionBy([arrays], [iteratee=_.identity])",
+   "return": "(Array): Returns the new array of combined values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    },
+    {
+     "desc": "[comparator] (Function): The comparator invoked per element."
+    }
+   ],
+   "desc": "This method is like _.union except that it accepts comparator which is invoked to compare elements of arrays. Result values are chosen from the first array in which the value occurs. The comparator is invoked with two arguments: (arrVal, othVal).",
+   "signature": "_.unionWith([arrays], [comparator])",
+   "return": "(Array): Returns the new array of combined values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    }
+   ],
+   "desc": "Creates a duplicate-free version of an array, using SameValueZero for equality comparisons, in which only the first occurrence of each element is kept. The order of result values is determined by the order they occur in the array.",
+   "signature": "_.uniq(array)",
+   "return": "(Array): Returns the new duplicate free array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.uniq except that it accepts iteratee which is invoked for each element in array to generate the criterion by which uniqueness is computed. The order of result values is determined by the order they occur in the array. The iteratee is invoked with one argument:\n(value).",
+   "signature": "_.uniqBy(array, [iteratee=_.identity])",
+   "return": "(Array): Returns the new duplicate free array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[comparator] (Function): The comparator invoked per element."
+    }
+   ],
+   "desc": "This method is like _.uniq except that it accepts comparator which is invoked to compare elements of array. The order of result values is determined by the order they occur in the array.The comparator is invoked with two arguments: (arrVal, othVal).",
+   "signature": "_.uniqWith(array, [comparator])",
+   "return": "(Array): Returns the new duplicate free array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array of grouped elements to process."
+    }
+   ],
+   "desc": "This method is like _.zip except that it accepts an array of grouped elements and creates an array regrouping the elements to their pre-zip configuration.",
+   "signature": "_.unzip(array)",
+   "return": "(Array): Returns the new array of regrouped elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array of grouped elements to process."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function to combine regrouped values."
+    }
+   ],
+   "desc": "This method is like _.unzip except that it accepts iteratee to specify how regrouped values should be combined. The iteratee is invoked with the elements of each group: (...group).",
+   "signature": "_.unzipWith(array, [iteratee=_.identity])",
+   "return": "(Array): Returns the new array of regrouped elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to inspect."
+    },
+    {
+     "desc": "[values] (...*): The values to exclude."
+    }
+   ],
+   "desc": "Creates an array excluding all given values using SameValueZero for equality comparisons.\nNote: Unlike _.pull, this method returns a new array.",
+   "signature": "_.without(array, [values])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    }
+   ],
+   "desc": "Creates an array of unique values that is the symmetric difference of the given arrays. The order of result values is determined by the order they occur in the arrays.",
+   "signature": "_.xor([arrays])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.xor except that it accepts iteratee which is invoked for each element of each arrays to generate the criterion by which by which they're compared. The order of result values is determined by the order they occur in the arrays. The iteratee is invoked with one argument: (value).",
+   "signature": "_.xorBy([arrays], [iteratee=_.identity])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to inspect."
+    },
+    {
+     "desc": "[comparator] (Function): The comparator invoked per element."
+    }
+   ],
+   "desc": "This method is like _.xor except that it accepts comparator which is invoked to compare elements of arrays. The order of result values is determined by the order they occur in the arrays. The comparator is invoked with two arguments: (arrVal, othVal).",
+   "signature": "_.xorWith([arrays], [comparator])",
+   "return": "(Array): Returns the new array of filtered values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to process."
+    }
+   ],
+   "desc": "Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.",
+   "signature": "_.zip([arrays])",
+   "return": "(Array): Returns the new array of grouped elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[props=[]] (Array): The property identifiers."
+    },
+    {
+     "desc": "[values=[]] (Array): The property values."
+    }
+   ],
+   "desc": "This method is like _.fromPairs except that it accepts two arrays, one of property identifiers and one of corresponding values.",
+   "signature": "_.zipObject([props=[]], [values=[]])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[props=[]] (Array): The property identifiers."
+    },
+    {
+     "desc": "[values=[]] (Array): The property values."
+    }
+   ],
+   "desc": "This method is like _.zipObject except that it supports property paths.",
+   "signature": "_.zipObjectDeep([props=[]], [values=[]])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[arrays] (...Array): The arrays to process."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function to combine grouped values."
+    }
+   ],
+   "desc": "This method is like _.zip except that it accepts iteratee to specify how grouped values should be combined. The iteratee is invoked with the elements of each group: (...group).",
+   "signature": "_.zipWith([arrays], [iteratee=_.identity])",
+   "return": "(Array): Returns the new array of grouped elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee to transform keys."
+    }
+   ],
+   "desc": "Creates an object composed of keys generated from the results of running each element of collection thru iteratee. The corresponding value of each key is the number of times the key was returned by iteratee. The iteratee is invoked with one argument: (value).",
+   "signature": "_.countBy(collection, [iteratee=_.identity])",
+   "return": "(Object): Returns the composed aggregate object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Checks if predicate returns truthy for all elements of collection. Iteration is stopped once predicate returns falsey. The predicate is invoked with three arguments: (value, index|key, collection).\nNote: This method returns true for empty collections because everything is true of elements of empty collections.",
+   "signature": "_.every(collection, [predicate=_.identity])",
+   "return": "(boolean): Returns true if all elements pass the predicate check, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Iterates over elements of collection, returning an array of all elements predicate returns truthy for. The predicate is invoked with three arguments: (value, index|key, collection).\nNote: Unlike _.remove, this method returns a new array.",
+   "signature": "_.filter(collection, [predicate=_.identity])",
+   "return": "(Array): Returns the new filtered array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to inspect."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[fromIndex=0] (number): The index to search from."
+    }
+   ],
+   "desc": "Iterates over elements of collection, returning the first element predicate returns truthy for. The predicate is invoked with three arguments: (value, index|key, collection).",
+   "signature": "_.find(collection, [predicate=_.identity], [fromIndex=0])",
+   "return": "(*): Returns the matched element, else undefined."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to inspect."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[fromIndex=collection.length-1] (number): The index to search from."
+    }
+   ],
+   "desc": "This method is like _.find except that it iterates over elements of collection from right to left.",
+   "signature": "_.findLast(collection, [predicate=_.identity], [fromIndex=collection.length-1])",
+   "return": "(*): Returns the matched element, else undefined."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates a flattened array of values by running each element in collection thru iteratee and flattening the mapped results. The iteratee is invoked with three arguments: (value, index|key, collection).",
+   "signature": "_.flatMap(collection, [iteratee=_.identity])",
+   "return": "(Array): Returns the new flattened array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "This method is like _.flatMap except that it recursively flattens the mapped results.",
+   "signature": "_.flatMapDeep(collection, [iteratee=_.identity])",
+   "return": "(Array): Returns the new flattened array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[depth=1] (number): The maximum recursion depth."
+    }
+   ],
+   "desc": "This method is like _.flatMap except that it recursively flattens the mapped results up to depth times.",
+   "signature": "_.flatMapDepth(collection, [iteratee=_.identity], [depth=1])",
+   "return": "(Array): Returns the new flattened array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Iterates over elements of collection and invokes iteratee for each element. The iteratee is invoked with three arguments: (value, index|key, collection). Iteratee functions may exit iteration early by explicitly returning false.\nNote: As with other \"Collections\" methods, objects with a \"length\" property are iterated like arrays. To avoid this behavior use _.forIn or _.forOwn for object iteration.",
+   "signature": "_.forEach(collection, [iteratee=_.identity])",
+   "return": "_.each"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "This method is like _.forEach except that it iterates over elements of collection from right to left.",
+   "signature": "_.forEachRight(collection, [iteratee=_.identity])",
+   "return": "_.eachRight"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee to transform keys."
+    }
+   ],
+   "desc": "Creates an object composed of keys generated from the results of running each element of collection thru iteratee. The order of grouped values is determined by the order they occur in collection. The corresponding value of each key is an array of elements responsible for generating the key. The iteratee is invoked with one argument: (value).",
+   "signature": "_.groupBy(collection, [iteratee=_.identity])",
+   "return": "(Object): Returns the composed aggregate object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object|string): The collection to inspect."
+    },
+    {
+     "desc": "value (*): The value to search for."
+    },
+    {
+     "desc": "[fromIndex=0] (number): The index to search from."
+    }
+   ],
+   "desc": "Checks if value is in collection. If collection is a string, it's checked for a substring of value, otherwise SameValueZero is used for equality comparisons. If fromIndex is negative, it's used as the offset from the end of collection.",
+   "signature": "_.includes(collection, value, [fromIndex=0])",
+   "return": "(boolean): Returns true if value is found, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "path (Array|Function|string): The path of the method to invoke or the function invoked per iteration."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke each method with."
+    }
+   ],
+   "desc": "Invokes the method at path of each element in collection, returning an array of the results of each invoked method. Any additional arguments are provided to each invoked method. If path is a function, it's invoked for, and this bound to, each element in collection.",
+   "signature": "_.invokeMap(collection, path, [args])",
+   "return": "(Array): Returns the array of results."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee to transform keys."
+    }
+   ],
+   "desc": "Creates an object composed of keys generated from the results of running each element of collection thru iteratee. The corresponding value of each key is the last element responsible for generating the key. The iteratee is invoked with one argument: (value).",
+   "signature": "_.keyBy(collection, [iteratee=_.identity])",
+   "return": "(Object): Returns the composed aggregate object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments:\n(value, index|key, collection).\nMany lodash methods are guarded to work as iteratees for methods like _.every, _.filter, _.map, _.mapValues, _.reject, and _.some.\nThe guarded methods are:\nary, chunk, curry, curryRight, drop, dropRight, every, fill, invert, parseInt, random, range, rangeRight, repeat, sampleSize, slice, some, sortBy, split, take, takeRight, template, trim, trimEnd, trimStart, and words",
+   "signature": "_.map(collection, [iteratee=_.identity])",
+   "return": "(Array): Returns the new mapped array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratees=[_.identity]] (Array[]|Function[]|Object[]|string[]): The iteratees to sort by."
+    },
+    {
+     "desc": "[orders] (string[]): The sort orders of iteratees."
+    }
+   ],
+   "desc": "This method is like _.sortBy except that it allows specifying the sort orders of the iteratees to sort by. If orders is unspecified, all values are sorted in ascending order. Otherwise, specify an order of \"desc\" for descending or \"asc\" for ascending sort order of corresponding values.",
+   "signature": "_.orderBy(collection, [iteratees=[_.identity]], [orders])",
+   "return": "(Array): Returns the new sorted array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates an array of elements split into two groups, the first of which contains elements predicate returns truthy for, the second of which contains elements predicate returns falsey for. The predicate is invoked with one argument: (value).",
+   "signature": "_.partition(collection, [predicate=_.identity])",
+   "return": "(Array): Returns the array of grouped elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[accumulator] (*): The initial value."
+    }
+   ],
+   "desc": "Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee, where each successive invocation is supplied the return value of the previous. If accumulator is not given, the first element of collection is used as the initial value. The iteratee is invoked with four arguments:\n(accumulator, value, index|key, collection).\nMany lodash methods are guarded to work as iteratees for methods like _.reduce, _.reduceRight, and _.transform.\nThe guarded methods are:\nassign, defaults, defaultsDeep, includes, merge, orderBy, and sortBy",
+   "signature": "_.reduce(collection, [iteratee=_.identity], [accumulator])",
+   "return": "(*): Returns the accumulated value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[accumulator] (*): The initial value."
+    }
+   ],
+   "desc": "This method is like _.reduce except that it iterates over elements of collection from right to left.",
+   "signature": "_.reduceRight(collection, [iteratee=_.identity], [accumulator])",
+   "return": "(*): Returns the accumulated value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "The opposite of _.filter; this method returns the elements of collection that predicate does not return truthy for.",
+   "signature": "_.reject(collection, [predicate=_.identity])",
+   "return": "(Array): Returns the new filtered array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to sample."
+    }
+   ],
+   "desc": "Gets a random element from collection.",
+   "signature": "_.sample(collection)",
+   "return": "(*): Returns the random element."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to sample."
+    },
+    {
+     "desc": "[n=1] (number): The number of elements to sample."
+    }
+   ],
+   "desc": "Gets n random elements at unique keys from collection up to the size of collection.",
+   "signature": "_.sampleSize(collection, [n=1])",
+   "return": "(Array): Returns the random elements."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to shuffle."
+    }
+   ],
+   "desc": "Creates an array of shuffled values, using a version of the Fisher-Yates shuffle.",
+   "signature": "_.shuffle(collection)",
+   "return": "(Array): Returns the new shuffled array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object|string): The collection to inspect."
+    }
+   ],
+   "desc": "Gets the size of collection by returning its length for array-like values or the number of own enumerable string keyed properties for objects.",
+   "signature": "_.size(collection)",
+   "return": "(number): Returns the collection size."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Checks if predicate returns truthy for any element of collection. Iteration is stopped once predicate returns truthy. The predicate is invoked with three arguments: (value, index|key, collection).",
+   "signature": "_.some(collection, [predicate=_.identity])",
+   "return": "(boolean): Returns true if any element passes the predicate check, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "collection (Array|Object): The collection to iterate over."
+    },
+    {
+     "desc": "[iteratees=[_.identity]] (...(Function|Function[])): The iteratees to sort by."
+    }
+   ],
+   "desc": "Creates an array of elements, sorted in ascending order by the results of running each element in a collection thru each iteratee. This method performs a stable sort, that is, it preserves the original sort order of equal elements. The iteratees are invoked with one argument: (value).",
+   "signature": "_.sortBy(collection, [iteratees=[_.identity]])",
+   "return": "(Array): Returns the new sorted array."
+  },
+  {
+   "desc": "Gets the timestamp of the number of milliseconds that have elapsed since the Unix epoch (1 January 1970 00:00:00 UTC).",
+   "signature": "_.now()",
+   "return": "(number): Returns the timestamp."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "n (number): The number of calls before func is invoked."
+    },
+    {
+     "desc": "func (Function): The function to restrict."
+    }
+   ],
+   "desc": "The opposite of _.before; this method creates a function that invokes func once it's called n or more times.",
+   "signature": "_.after(n, func)",
+   "return": "(Function): Returns the new restricted function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to cap arguments for."
+    },
+    {
+     "desc": "[n=func.length] (number): The arity cap."
+    }
+   ],
+   "desc": "Creates a function that invokes func, with up to n arguments, ignoring any additional arguments.",
+   "signature": "_.ary(func, [n=func.length])",
+   "return": "(Function): Returns the new capped function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "n (number): The number of calls at which func is no longer invoked."
+    },
+    {
+     "desc": "func (Function): The function to restrict."
+    }
+   ],
+   "desc": "Creates a function that invokes func, with the this binding and arguments of the created function, while it's called less than n times. Subsequent calls to the created function return the result of the last func invocation.",
+   "signature": "_.before(n, func)",
+   "return": "(Function): Returns the new restricted function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to bind."
+    },
+    {
+     "desc": "thisArg (*): The this binding of func."
+    },
+    {
+     "desc": "[partials] (...*): The arguments to be partially applied."
+    }
+   ],
+   "desc": "Creates a function that invokes func with the this binding of thisArg and partials prepended to the arguments it receives.\nThe _.bind.placeholder value, which defaults to _ in monolithic builds, may be used as a placeholder for partially applied arguments.\nNote: Unlike native Function#bind, this method doesn't set the \"length\" property of bound functions.",
+   "signature": "_.bind(func, thisArg, [partials])",
+   "return": "(Function): Returns the new bound function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to invoke the method on."
+    },
+    {
+     "desc": "key (string): The key of the method."
+    },
+    {
+     "desc": "[partials] (...*): The arguments to be partially applied."
+    }
+   ],
+   "desc": "Creates a function that invokes the method at object[key] with partials prepended to the arguments it receives.\nThis method differs from _.bind by allowing bound functions to reference methods that may be redefined or don't yet exist. See Peter Michaux's article for more details.\nThe _.bindKey.placeholder value, which defaults to _ in monolithic builds, may be used as a placeholder for partially applied arguments.",
+   "signature": "_.bindKey(object, key, [partials])",
+   "return": "(Function): Returns the new bound function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to curry."
+    },
+    {
+     "desc": "[arity=func.length] (number): The arity of func."
+    }
+   ],
+   "desc": "Creates a function that accepts arguments of func and either invokes func returning its result, if at least arity number of arguments have been provided, or returns a function that accepts the remaining func arguments, and so on. The arity of func may be specified if func.length is not sufficient.\nThe _.curry.placeholder value, which defaults to _ in monolithic builds, may be used as a placeholder for provided arguments.\nNote: This method doesn't set the \"length\" property of curried functions.",
+   "signature": "_.curry(func, [arity=func.length])",
+   "return": "(Function): Returns the new curried function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to curry."
+    },
+    {
+     "desc": "[arity=func.length] (number): The arity of func."
+    }
+   ],
+   "desc": "This method is like _.curry except that arguments are applied to func in the manner of _.partialRight instead of _.partial.\nThe _.curryRight.placeholder value, which defaults to _ in monolithic builds, may be used as a placeholder for provided arguments.\nNote: This method doesn't set the \"length\" property of curried functions.",
+   "signature": "_.curryRight(func, [arity=func.length])",
+   "return": "(Function): Returns the new curried function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to debounce."
+    },
+    {
+     "desc": "[wait=0] (number): The number of milliseconds to delay."
+    },
+    {
+     "desc": "[options={}] (Object): The options object."
+    },
+    {
+     "desc": "[options.leading=false] (boolean): Specify invoking on the leading edge of the timeout."
+    },
+    {
+     "desc": "[options.maxWait] (number): The maximum time func is allowed to be delayed before it's invoked."
+    },
+    {
+     "desc": "[options.trailing=true] (boolean): Specify invoking on the trailing edge of the timeout."
+    }
+   ],
+   "desc": "Creates a debounced function that delays invoking func until after wait milliseconds have elapsed since the last time the debounced function was invoked. The debounced function comes with a cancel method to cancel delayed func invocations and a flush method to immediately invoke them. Provide options to indicate whether func should be invoked on the leading and/or trailing edge of the wait timeout. The func is invoked with the last arguments provided to the debounced function. Subsequent calls to the debounced function return the result of the last func invocation.\nNote: If leading and trailing options are true, func is invoked on the trailing edge of the timeout only if the debounced function is invoked more than once during the wait timeout.\nIf wait is 0 and leading is false, func invocation is deferred until to the next tick, similar to setTimeout with a timeout of 0.\nSee David Corbacho's article for details over the differences between _.debounce and _.throttle.",
+   "signature": "_.debounce(func, [wait=0], [options={}])",
+   "return": "(Function): Returns the new debounced function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to defer."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke func with."
+    }
+   ],
+   "desc": "Defers invoking the func until the current call stack has cleared. Any additional arguments are provided to func when it's invoked.",
+   "signature": "_.defer(func, [args])",
+   "return": "(number): Returns the timer id."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to delay."
+    },
+    {
+     "desc": "wait (number): The number of milliseconds to delay invocation."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke func with."
+    }
+   ],
+   "desc": "Invokes func after wait milliseconds. Any additional arguments are provided to func when it's invoked.",
+   "signature": "_.delay(func, wait, [args])",
+   "return": "(number): Returns the timer id."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to flip arguments for."
+    }
+   ],
+   "desc": "Creates a function that invokes func with arguments reversed.",
+   "signature": "_.flip(func)",
+   "return": "(Function): Returns the new flipped function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to have its output memoized."
+    },
+    {
+     "desc": "[resolver] (Function): The function to resolve the cache key."
+    }
+   ],
+   "desc": "Creates a function that memoizes the result of func. If resolver is provided, it determines the cache key for storing the result based on the arguments provided to the memoized function. By default, the first argument provided to the memoized function is used as the map cache key. The func is invoked with the this binding of the memoized function.\nNote: The cache is exposed as the cache property on the memoized function. Its creation may be customized by replacing the _.memoize.Cache constructor with one whose instances implement the Map method interface of clear, delete, get, has, and set.",
+   "signature": "_.memoize(func, [resolver])",
+   "return": "(Function): Returns the new memoized function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "predicate (Function): The predicate to negate."
+    }
+   ],
+   "desc": "Creates a function that negates the result of the predicate func. The func predicate is invoked with the this binding and arguments of the created function.",
+   "signature": "_.negate(predicate)",
+   "return": "(Function): Returns the new negated function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to restrict."
+    }
+   ],
+   "desc": "Creates a function that is restricted to invoking func once. Repeat calls to the function return the value of the first invocation. The func is invoked with the this binding and arguments of the created function.",
+   "signature": "_.once(func)",
+   "return": "(Function): Returns the new restricted function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to wrap."
+    },
+    {
+     "desc": "[transforms=[_.identity]] (...(Function|Function[])): The argument transforms."
+    }
+   ],
+   "desc": "Creates a function that invokes func with its arguments transformed.",
+   "signature": "_.overArgs(func, [transforms=[_.identity]])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to partially apply arguments to."
+    },
+    {
+     "desc": "[partials] (...*): The arguments to be partially applied."
+    }
+   ],
+   "desc": "Creates a function that invokes func with partials prepended to the arguments it receives. This method is like _.bind except it does not alter the this binding.\nThe _.partial.placeholder value, which defaults to _ in monolithic builds, may be used as a placeholder for partially applied arguments.\nNote: This method doesn't set the \"length\" property of partially applied functions.",
+   "signature": "_.partial(func, [partials])",
+   "return": "(Function): Returns the new partially applied function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to partially apply arguments to."
+    },
+    {
+     "desc": "[partials] (...*): The arguments to be partially applied."
+    }
+   ],
+   "desc": "This method is like _.partial except that partially applied arguments are appended to the arguments it receives.\nThe _.partialRight.placeholder value, which defaults to _ in monolithic builds, may be used as a placeholder for partially applied arguments.\nNote: This method doesn't set the \"length\" property of partially applied functions.",
+   "signature": "_.partialRight(func, [partials])",
+   "return": "(Function): Returns the new partially applied function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to rearrange arguments for."
+    },
+    {
+     "desc": "indexes (...(number|number[])): The arranged argument indexes."
+    }
+   ],
+   "desc": "Creates a function that invokes func with arguments arranged according to the specified indexes where the argument value at the first index is provided as the first argument, the argument value at the second index is provided as the second argument, and so on.",
+   "signature": "_.rearg(func, indexes)",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to apply a rest parameter to."
+    },
+    {
+     "desc": "[start=func.length-1] (number): The start position of the rest parameter."
+    }
+   ],
+   "desc": "Creates a function that invokes func with the this binding of the created function and arguments from start and beyond provided as an array.\nNote: This method is based on the rest parameter.",
+   "signature": "_.rest(func, [start=func.length-1])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to spread arguments over."
+    },
+    {
+     "desc": "[start=0] (number): The start position of the spread."
+    }
+   ],
+   "desc": "Creates a function that invokes func with the this binding of the create function and an array of arguments much like Function#apply.\nNote: This method is based on the spread operator.",
+   "signature": "_.spread(func, [start=0])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to throttle."
+    },
+    {
+     "desc": "[wait=0] (number): The number of milliseconds to throttle invocations to."
+    },
+    {
+     "desc": "[options={}] (Object): The options object."
+    },
+    {
+     "desc": "[options.leading=true] (boolean): Specify invoking on the leading edge of the timeout."
+    },
+    {
+     "desc": "[options.trailing=true] (boolean): Specify invoking on the trailing edge of the timeout."
+    }
+   ],
+   "desc": "Creates a throttled function that only invokes func at most once per every wait milliseconds. The throttled function comes with a cancel method to cancel delayed func invocations and a flush method to immediately invoke them. Provide options to indicate whether func should be invoked on the leading and/or trailing edge of the wait timeout. The func is invoked with the last arguments provided to the throttled function. Subsequent calls to the throttled function return the result of the last func invocation.\nNote: If leading and trailing options are true, func is invoked on the trailing edge of the timeout only if the throttled function is invoked more than once during the wait timeout.\nIf wait is 0 and leading is false, func invocation is deferred until to the next tick, similar to setTimeout with a timeout of 0.\nSee David Corbacho's article for details over the differences between _.throttle and _.debounce.",
+   "signature": "_.throttle(func, [wait=0], [options={}])",
+   "return": "(Function): Returns the new throttled function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to cap arguments for."
+    }
+   ],
+   "desc": "Creates a function that accepts up to one argument, ignoring any additional arguments.",
+   "signature": "_.unary(func)",
+   "return": "(Function): Returns the new capped function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to wrap."
+    },
+    {
+     "desc": "[wrapper=identity] (Function): The wrapper function."
+    }
+   ],
+   "desc": "Creates a function that provides value to wrapper as its first argument. Any additional arguments provided to the function are appended to those provided to the wrapper. The wrapper is invoked with the this binding of the created function.",
+   "signature": "_.wrap(value, [wrapper=identity])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to inspect."
+    }
+   ],
+   "desc": "Casts value as an array if it's not one.",
+   "signature": "_.castArray(value)",
+   "return": "(Array): Returns the cast array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to clone."
+    }
+   ],
+   "desc": "Creates a shallow clone of value.\nNote: This method is loosely based on the structured clone algorithm and supports cloning arrays, array buffers, booleans, date objects, maps, numbers, Object objects, regexes, sets, strings, symbols, and typed arrays. The own enumerable properties of arguments objects are cloned as plain objects. An empty object is returned for uncloneable values such as error objects, functions, DOM nodes, and WeakMaps.",
+   "signature": "_.clone(value)",
+   "return": "(*): Returns the cloned value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to recursively clone."
+    }
+   ],
+   "desc": "This method is like _.clone except that it recursively clones value.",
+   "signature": "_.cloneDeep(value)",
+   "return": "(*): Returns the deep cloned value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to recursively clone."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize cloning."
+    }
+   ],
+   "desc": "This method is like _.cloneWith except that it recursively clones value.",
+   "signature": "_.cloneDeepWith(value, [customizer])",
+   "return": "(*): Returns the deep cloned value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to clone."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize cloning."
+    }
+   ],
+   "desc": "This method is like _.clone except that it accepts customizer which is invoked to produce the cloned value. If customizer returns undefined, cloning is handled by the method instead. The customizer is invoked with up to four arguments; (value [, index|key, object, stack]).",
+   "signature": "_.cloneWith(value, [customizer])",
+   "return": "(*): Returns the cloned value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    },
+    {
+     "desc": "source (Object): The object of property predicates to conform to."
+    }
+   ],
+   "desc": "Checks if object conforms to source by invoking the predicate properties of source with the corresponding property values of object.\nNote: This method is equivalent to _.conforms when source is partially applied.",
+   "signature": "_.conformsTo(object, source)",
+   "return": "(boolean): Returns true if object conforms, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    }
+   ],
+   "desc": "Performs a SameValueZero comparison between two values to determine if they are equivalent.",
+   "signature": "_.eq(value, other)",
+   "return": "(boolean): Returns true if the values are equivalent, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    }
+   ],
+   "desc": "Checks if value is greater than other.",
+   "signature": "_.gt(value, other)",
+   "return": "(boolean): Returns true if value is greater than other, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    }
+   ],
+   "desc": "Checks if value is greater than or equal to other.",
+   "signature": "_.gte(value, other)",
+   "return": "(boolean): Returns true if value is greater than or equal to other, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is likely an arguments object.",
+   "signature": "_.isArguments(value)",
+   "return": "(boolean): Returns true if value is an arguments object, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as an Array object.",
+   "signature": "_.isArray(value)",
+   "return": "(boolean): Returns true if value is an array, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as an ArrayBuffer object.",
+   "signature": "_.isArrayBuffer(value)",
+   "return": "(boolean): Returns true if value is an array buffer, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is array-like. A value is considered array-like if it's not a function and has a value.length that's an integer greater than or equal to 0 and less than or equal to Number.MAX_SAFE_INTEGER.",
+   "signature": "_.isArrayLike(value)",
+   "return": "(boolean): Returns true if value is array-like, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "This method is like _.isArrayLike except that it also checks if value is an object.",
+   "signature": "_.isArrayLikeObject(value)",
+   "return": "(boolean): Returns true if value is an array-like object, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a boolean primitive or object.",
+   "signature": "_.isBoolean(value)",
+   "return": "(boolean): Returns true if value is a boolean, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is a buffer.",
+   "signature": "_.isBuffer(value)",
+   "return": "(boolean): Returns true if value is a buffer, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a Date object.",
+   "signature": "_.isDate(value)",
+   "return": "(boolean): Returns true if value is a date object, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is likely a DOM element.",
+   "signature": "_.isElement(value)",
+   "return": "(boolean): Returns true if value is a DOM element, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is an empty object, collection, map, or set.\nObjects are considered empty if they have no own enumerable string keyed properties.\nArray-like values such as arguments objects, arrays, buffers, strings, or jQuery-like collections are considered empty if they have a length of 0. Similarly, maps and sets are considered empty if they have a size of 0.",
+   "signature": "_.isEmpty(value)",
+   "return": "(boolean): Returns true if value is empty, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    }
+   ],
+   "desc": "Performs a deep comparison between two values to determine if they are equivalent.\nNote: This method supports comparing arrays, array buffers, booleans, date objects, error objects, maps, numbers, Object objects, regexes, sets, strings, symbols, and typed arrays. Object objects are compared by their own, not inherited, enumerable properties. Functions and DOM nodes are compared by strict equality, i.e. ===.",
+   "signature": "_.isEqual(value, other)",
+   "return": "(boolean): Returns true if the values are equivalent, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize comparisons."
+    }
+   ],
+   "desc": "This method is like _.isEqual except that it accepts customizer which is invoked to compare values. If customizer returns undefined, comparisons are handled by the method instead. The customizer is invoked with up to six arguments: (objValue, othValue [, index|key, object, other, stack]).",
+   "signature": "_.isEqualWith(value, other, [customizer])",
+   "return": "(boolean): Returns true if the values are equivalent, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is an Error, EvalError, RangeError, ReferenceError, SyntaxError, TypeError, or URIError object.",
+   "signature": "_.isError(value)",
+   "return": "(boolean): Returns true if value is an error object, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is a finite primitive number.\nNote: This method is based on Number.isFinite.",
+   "signature": "_.isFinite(value)",
+   "return": "(boolean): Returns true if value is a finite number, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a Function object.",
+   "signature": "_.isFunction(value)",
+   "return": "(boolean): Returns true if value is a function, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is an integer.\nNote: This method is based on Number.isInteger.",
+   "signature": "_.isInteger(value)",
+   "return": "(boolean): Returns true if value is an integer, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is a valid array-like length.\nNote: This method is loosely based on ToLength.",
+   "signature": "_.isLength(value)",
+   "return": "(boolean): Returns true if value is a valid length, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a Map object.",
+   "signature": "_.isMap(value)",
+   "return": "(boolean): Returns true if value is a map, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    },
+    {
+     "desc": "source (Object): The object of property values to match."
+    }
+   ],
+   "desc": "Performs a partial deep comparison between object and source to determine if object contains equivalent property values.\nNote: This method is equivalent to _.matches when source is partially applied.\nPartial comparisons will match empty array and empty object source values against any array or object value, respectively. See _.isEqual for a list of supported value comparisons.",
+   "signature": "_.isMatch(object, source)",
+   "return": "(boolean): Returns true if object is a match, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    },
+    {
+     "desc": "source (Object): The object of property values to match."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize comparisons."
+    }
+   ],
+   "desc": "This method is like _.isMatch except that it accepts customizer which is invoked to compare values. If customizer returns undefined, comparisons are handled by the method instead. The customizer is invoked with five arguments: (objValue, srcValue, index|key, object, source).",
+   "signature": "_.isMatchWith(object, source, [customizer])",
+   "return": "(boolean): Returns true if object is a match, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is NaN.\nNote: This method is based on Number.isNaN and is not the same as global isNaN which returns true for undefined and other non-number values.",
+   "signature": "_.isNaN(value)",
+   "return": "(boolean): Returns true if value is NaN, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is a pristine native function.\nNote: This method can't reliably detect native functions in the presence of the core-js package because core-js circumvents this kind of detection. Despite multiple requests, the core-js maintainer has made it clear: any attempt to fix the detection will be obstructed. As a result, we're left with little choice but to throw an error. Unfortunately, this also affects packages, like babel-polyfill, which rely on core-js.",
+   "signature": "_.isNative(value)",
+   "return": "(boolean): Returns true if value is a native function, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is null or undefined.",
+   "signature": "_.isNil(value)",
+   "return": "(boolean): Returns true if value is nullish, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is null.",
+   "signature": "_.isNull(value)",
+   "return": "(boolean): Returns true if value is null, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a Number primitive or object.\nNote: To exclude Infinity, -Infinity, and NaN, which are classified as numbers, use the _.isFinite method.",
+   "signature": "_.isNumber(value)",
+   "return": "(boolean): Returns true if value is a number, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is the language type of Object. (e.g. arrays, functions, objects, regexes, new Number(0), and new String(''))",
+   "signature": "_.isObject(value)",
+   "return": "(boolean): Returns true if value is an object, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is object-like. A value is object-like if it's not null and has a typeof result of \"object\".",
+   "signature": "_.isObjectLike(value)",
+   "return": "(boolean): Returns true if value is object-like, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is a plain object, that is, an object created by the Object constructor or one with a [[Prototype]] of null.",
+   "signature": "_.isPlainObject(value)",
+   "return": "(boolean): Returns true if value is a plain object, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a RegExp object.",
+   "signature": "_.isRegExp(value)",
+   "return": "(boolean): Returns true if value is a regexp, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is a safe integer. An integer is safe if it's an IEEE-754 double precision number which isn't the result of a rounded unsafe integer.\nNote: This method is based on Number.isSafeInteger.",
+   "signature": "_.isSafeInteger(value)",
+   "return": "(boolean): Returns true if value is a safe integer, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a Set object.",
+   "signature": "_.isSet(value)",
+   "return": "(boolean): Returns true if value is a set, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a String primitive or object.",
+   "signature": "_.isString(value)",
+   "return": "(boolean): Returns true if value is a string, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a Symbol primitive or object.",
+   "signature": "_.isSymbol(value)",
+   "return": "(boolean): Returns true if value is a symbol, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a typed array.",
+   "signature": "_.isTypedArray(value)",
+   "return": "(boolean): Returns true if value is a typed array, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is undefined.",
+   "signature": "_.isUndefined(value)",
+   "return": "(boolean): Returns true if value is undefined, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a WeakMap object.",
+   "signature": "_.isWeakMap(value)",
+   "return": "(boolean): Returns true if value is a weak map, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    }
+   ],
+   "desc": "Checks if value is classified as a WeakSet object.",
+   "signature": "_.isWeakSet(value)",
+   "return": "(boolean): Returns true if value is a weak set, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    }
+   ],
+   "desc": "Checks if value is less than other.",
+   "signature": "_.lt(value, other)",
+   "return": "(boolean): Returns true if value is less than other, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to compare."
+    },
+    {
+     "desc": "other (*): The other value to compare."
+    }
+   ],
+   "desc": "Checks if value is less than or equal to other.",
+   "signature": "_.lte(value, other)",
+   "return": "(boolean): Returns true if value is less than or equal to other, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to an array.",
+   "signature": "_.toArray(value)",
+   "return": "(Array): Returns the converted array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to a finite number.",
+   "signature": "_.toFinite(value)",
+   "return": "(number): Returns the converted number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to an integer.\nNote: This method is loosely based on ToInteger.",
+   "signature": "_.toInteger(value)",
+   "return": "(number): Returns the converted integer."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to an integer suitable for use as the length of an array-like object.\nNote: This method is based on ToLength.",
+   "signature": "_.toLength(value)",
+   "return": "(number): Returns the converted integer."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to process."
+    }
+   ],
+   "desc": "Converts value to a number.",
+   "signature": "_.toNumber(value)",
+   "return": "(number): Returns the number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to a plain object flattening inherited enumerable string keyed properties of value to own properties of the plain object.",
+   "signature": "_.toPlainObject(value)",
+   "return": "(Object): Returns the converted plain object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to a safe integer. A safe integer can be compared and represented correctly.",
+   "signature": "_.toSafeInteger(value)",
+   "return": "(number): Returns the converted integer."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to a string. An empty string is returned for null and undefined values. The sign of -0 is preserved.",
+   "signature": "_.toString(value)",
+   "return": "(string): Returns the converted string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "augend (number): The first number in an addition."
+    },
+    {
+     "desc": "addend (number): The second number in an addition."
+    }
+   ],
+   "desc": "Adds two numbers.",
+   "signature": "_.add(augend, addend)",
+   "return": "(number): Returns the total."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "number (number): The number to round up."
+    },
+    {
+     "desc": "[precision=0] (number): The precision to round up to."
+    }
+   ],
+   "desc": "Computes number rounded up to precision.",
+   "signature": "_.ceil(number, [precision=0])",
+   "return": "(number): Returns the rounded up number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "dividend (number): The first number in a division."
+    },
+    {
+     "desc": "divisor (number): The second number in a division."
+    }
+   ],
+   "desc": "Divide two numbers.",
+   "signature": "_.divide(dividend, divisor)",
+   "return": "(number): Returns the quotient."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "number (number): The number to round down."
+    },
+    {
+     "desc": "[precision=0] (number): The precision to round down to."
+    }
+   ],
+   "desc": "Computes number rounded down to precision.",
+   "signature": "_.floor(number, [precision=0])",
+   "return": "(number): Returns the rounded down number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    }
+   ],
+   "desc": "Computes the maximum value of array. If array is empty or falsey, undefined is returned.",
+   "signature": "_.max(array)",
+   "return": "(*): Returns the maximum value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.max except that it accepts iteratee which is invoked for each element in array to generate the criterion by which the value is ranked. The iteratee is invoked with one argument: (value).",
+   "signature": "_.maxBy(array, [iteratee=_.identity])",
+   "return": "(*): Returns the maximum value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    }
+   ],
+   "desc": "Computes the mean of the values in array.",
+   "signature": "_.mean(array)",
+   "return": "(number): Returns the mean."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.mean except that it accepts iteratee which is invoked for each element in array to generate the value to be averaged. The iteratee is invoked with one argument: (value).",
+   "signature": "_.meanBy(array, [iteratee=_.identity])",
+   "return": "(number): Returns the mean."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    }
+   ],
+   "desc": "Computes the minimum value of array. If array is empty or falsey, undefined is returned.",
+   "signature": "_.min(array)",
+   "return": "(*): Returns the minimum value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.min except that it accepts iteratee which is invoked for each element in array to generate the criterion by which the value is ranked. The iteratee is invoked with one argument: (value).",
+   "signature": "_.minBy(array, [iteratee=_.identity])",
+   "return": "(*): Returns the minimum value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "multiplier (number): The first number in a multiplication."
+    },
+    {
+     "desc": "multiplicand (number): The second number in a multiplication."
+    }
+   ],
+   "desc": "Multiply two numbers.",
+   "signature": "_.multiply(multiplier, multiplicand)",
+   "return": "(number): Returns the product."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "number (number): The number to round."
+    },
+    {
+     "desc": "[precision=0] (number): The precision to round to."
+    }
+   ],
+   "desc": "Computes number rounded to precision.",
+   "signature": "_.round(number, [precision=0])",
+   "return": "(number): Returns the rounded number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "minuend (number): The first number in a subtraction."
+    },
+    {
+     "desc": "subtrahend (number): The second number in a subtraction."
+    }
+   ],
+   "desc": "Subtract two numbers.",
+   "signature": "_.subtract(minuend, subtrahend)",
+   "return": "(number): Returns the difference."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    }
+   ],
+   "desc": "Computes the sum of the values in array.",
+   "signature": "_.sum(array)",
+   "return": "(number): Returns the sum."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "array (Array): The array to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.sum except that it accepts iteratee which is invoked for each element in array to generate the value to be summed. The iteratee is invoked with one argument: (value).",
+   "signature": "_.sumBy(array, [iteratee=_.identity])",
+   "return": "(number): Returns the sum."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "number (number): The number to clamp."
+    },
+    {
+     "desc": "[lower] (number): The lower bound."
+    },
+    {
+     "desc": "upper (number): The upper bound."
+    }
+   ],
+   "desc": "Clamps number within the inclusive lower and upper bounds.",
+   "signature": "_.clamp(number, [lower], upper)",
+   "return": "(number): Returns the clamped number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "number (number): The number to check."
+    },
+    {
+     "desc": "[start=0] (number): The start of the range."
+    },
+    {
+     "desc": "end (number): The end of the range."
+    }
+   ],
+   "desc": "Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.",
+   "signature": "_.inRange(number, [start=0], end)",
+   "return": "(boolean): Returns true if number is in the range, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[lower=0] (number): The lower bound."
+    },
+    {
+     "desc": "[upper=1] (number): The upper bound."
+    },
+    {
+     "desc": "[floating] (boolean): Specify returning a floating-point number."
+    }
+   ],
+   "desc": "Produces a random number between the inclusive lower and upper bounds. If only one argument is provided a number between 0 and the given number is returned. If floating is true, or either lower or upper are floats, a floating-point number is returned instead of an integer.\nNote: JavaScript follows the IEEE-754 standard for resolving floating-point values which can produce unexpected results.",
+   "signature": "_.random([lower=0], [upper=1], [floating])",
+   "return": "(number): Returns the random number."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "[sources] (...Object): The source objects."
+    }
+   ],
+   "desc": "Assigns own enumerable string keyed properties of source objects to the destination object. Source objects are applied from left to right. Subsequent sources overwrite property assignments of previous sources.\nNote: This method mutates object and is loosely based on Object.assign.",
+   "signature": "_.assign(object, [sources])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "[sources] (...Object): The source objects."
+    }
+   ],
+   "desc": "This method is like _.assign except that it iterates over own and inherited source properties.\nNote: This method mutates object.",
+   "signature": "_.assignIn(object, [sources])",
+   "return": "_.extend"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "sources (...Object): The source objects."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize assigned values."
+    }
+   ],
+   "desc": "This method is like _.assignIn except that it accepts customizer which is invoked to produce the assigned values. If customizer returns undefined, assignment is handled by the method instead. The customizer is invoked with five arguments: (objValue, srcValue, key, object, source).\nNote: This method mutates object.",
+   "signature": "_.assignInWith(object, sources, [customizer])",
+   "return": "_.extendWith"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "sources (...Object): The source objects."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize assigned values."
+    }
+   ],
+   "desc": "This method is like _.assign except that it accepts customizer which is invoked to produce the assigned values. If customizer returns undefined, assignment is handled by the method instead. The customizer is invoked with five arguments: (objValue, srcValue, key, object, source).\nNote: This method mutates object.",
+   "signature": "_.assignWith(object, sources, [customizer])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[paths] (...(string|string[])): The property paths to pick."
+    }
+   ],
+   "desc": "Creates an array of values corresponding to paths of object.",
+   "signature": "_.at(object, [paths])",
+   "return": "(Array): Returns the picked values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "prototype (Object): The object to inherit from."
+    },
+    {
+     "desc": "[properties] (Object): The properties to assign to the object."
+    }
+   ],
+   "desc": "Creates an object that inherits from the prototype object. If a properties object is given, its own enumerable string keyed properties are assigned to the created object.",
+   "signature": "_.create(prototype, [properties])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "[sources] (...Object): The source objects."
+    }
+   ],
+   "desc": "Assigns own and inherited enumerable string keyed properties of source objects to the destination object for all destination properties that resolve to undefined. Source objects are applied from left to right. Once a property is set, additional values of the same property are ignored.\nNote: This method mutates object.",
+   "signature": "_.defaults(object, [sources])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "[sources] (...Object): The source objects."
+    }
+   ],
+   "desc": "This method is like _.defaults except that it recursively assigns default properties.\nNote: This method mutates object.",
+   "signature": "_.defaultsDeep(object, [sources])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "This method is like _.find except that it returns the key of the first element predicate returns truthy for instead of the element itself.",
+   "signature": "_.findKey(object, [predicate=_.identity])",
+   "return": "(*): Returns the key of the matched element, else undefined."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "This method is like _.findKey except that it iterates over elements of a collection in the opposite order.",
+   "signature": "_.findLastKey(object, [predicate=_.identity])",
+   "return": "(*): Returns the key of the matched element, else undefined."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Iterates over own and inherited enumerable string keyed properties of an object and invokes iteratee for each property. The iteratee is invoked with three arguments: (value, key, object). Iteratee functions may exit iteration early by explicitly returning false.",
+   "signature": "_.forIn(object, [iteratee=_.identity])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "This method is like _.forIn except that it iterates over properties of object in the opposite order.",
+   "signature": "_.forInRight(object, [iteratee=_.identity])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Iterates over own enumerable string keyed properties of an object and invokes iteratee for each property. The iteratee is invoked with three arguments: (value, key, object). Iteratee functions may exit iteration early by explicitly returning false.",
+   "signature": "_.forOwn(object, [iteratee=_.identity])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "This method is like _.forOwn except that it iterates over properties of object in the opposite order.",
+   "signature": "_.forOwnRight(object, [iteratee=_.identity])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    }
+   ],
+   "desc": "Creates an array of function property names from own enumerable properties of object.",
+   "signature": "_.functions(object)",
+   "return": "(Array): Returns the function names."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to inspect."
+    }
+   ],
+   "desc": "Creates an array of function property names from own and inherited enumerable properties of object.",
+   "signature": "_.functionsIn(object)",
+   "return": "(Array): Returns the function names."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to get."
+    },
+    {
+     "desc": "[defaultValue] (*): The value returned for undefined resolved values."
+    }
+   ],
+   "desc": "Gets the value at path of object. If the resolved value is undefined, the defaultValue is returned in its place.",
+   "signature": "_.get(object, path, [defaultValue])",
+   "return": "(*): Returns the resolved value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    },
+    {
+     "desc": "path (Array|string): The path to check."
+    }
+   ],
+   "desc": "Checks if path is a direct property of object.",
+   "signature": "_.has(object, path)",
+   "return": "(boolean): Returns true if path exists, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    },
+    {
+     "desc": "path (Array|string): The path to check."
+    }
+   ],
+   "desc": "Checks if path is a direct or inherited property of object.",
+   "signature": "_.hasIn(object, path)",
+   "return": "(boolean): Returns true if path exists, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to invert."
+    }
+   ],
+   "desc": "Creates an object composed of the inverted keys and values of object. If object contains duplicate values, subsequent values overwrite property assignments of previous values.",
+   "signature": "_.invert(object)",
+   "return": "(Object): Returns the new inverted object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to invert."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The iteratee invoked per element."
+    }
+   ],
+   "desc": "This method is like _.invert except that the inverted object is generated from the results of running each element of object thru iteratee. The corresponding inverted value of each inverted key is an array of keys responsible for generating the inverted value. The iteratee is invoked with one argument: (value).",
+   "signature": "_.invertBy(object, [iteratee=_.identity])",
+   "return": "(Object): Returns the new inverted object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    },
+    {
+     "desc": "path (Array|string): The path of the method to invoke."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke the method with."
+    }
+   ],
+   "desc": "Invokes the method at path of object.",
+   "signature": "_.invoke(object, path, [args])",
+   "return": "(*): Returns the result of the invoked method."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "Creates an array of the own enumerable property names of object.\nNote: Non-object values are coerced to objects. See the ES spec for more details.",
+   "signature": "_.keys(object)",
+   "return": "(Array): Returns the array of property names."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "Creates an array of the own and inherited enumerable property names of object.\nNote: Non-object values are coerced to objects.",
+   "signature": "_.keysIn(object)",
+   "return": "(Array): Returns the array of property names."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "The opposite of _.mapValues; this method creates an object with the same values as object and keys generated by running each own enumerable string keyed property of object thru iteratee. The iteratee is invoked with three arguments: (value, key, object).",
+   "signature": "_.mapKeys(object, [iteratee=_.identity])",
+   "return": "(Object): Returns the new mapped object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Creates an object with the same keys as object and values generated by running each own enumerable string keyed property of object thru iteratee. The iteratee is invoked with three arguments:\n(value, key, object).",
+   "signature": "_.mapValues(object, [iteratee=_.identity])",
+   "return": "(Object): Returns the new mapped object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "[sources] (...Object): The source objects."
+    }
+   ],
+   "desc": "This method is like _.assign except that it recursively merges own and inherited enumerable string keyed properties of source objects into the destination object. Source properties that resolve to undefined are skipped if a destination value exists. Array and plain object properties are merged recursively. Other objects and value types are overridden by assignment. Source objects are applied from left to right. Subsequent sources overwrite property assignments of previous sources.\nNote: This method mutates object.",
+   "signature": "_.merge(object, [sources])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The destination object."
+    },
+    {
+     "desc": "sources (...Object): The source objects."
+    },
+    {
+     "desc": "customizer (Function): The function to customize assigned values."
+    }
+   ],
+   "desc": "This method is like _.merge except that it accepts customizer which is invoked to produce the merged values of the destination and source properties. If customizer returns undefined, merging is handled by the method instead. The customizer is invoked with six arguments:\n(objValue, srcValue, key, object, source, stack).\nNote: This method mutates object.",
+   "signature": "_.mergeWith(object, sources, customizer)",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The source object."
+    },
+    {
+     "desc": "[paths] (...(string|string[])): The property paths to omit."
+    }
+   ],
+   "desc": "The opposite of _.pick; this method creates an object composed of the own and inherited enumerable property paths of object that are not omitted.\nNote: This method is considerably slower than _.pick.",
+   "signature": "_.omit(object, [paths])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The source object."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per property."
+    }
+   ],
+   "desc": "The opposite of _.pickBy; this method creates an object composed of the own and inherited enumerable string keyed properties of object that predicate doesn't return truthy for. The predicate is invoked with two arguments: (value, key).",
+   "signature": "_.omitBy(object, [predicate=_.identity])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The source object."
+    },
+    {
+     "desc": "[paths] (...(string|string[])): The property paths to pick."
+    }
+   ],
+   "desc": "Creates an object composed of the picked object properties.",
+   "signature": "_.pick(object, [paths])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The source object."
+    },
+    {
+     "desc": "[predicate=_.identity] (Function): The function invoked per property."
+    }
+   ],
+   "desc": "Creates an object composed of the object properties predicate returns truthy for. The predicate is invoked with two arguments: (value, key).",
+   "signature": "_.pickBy(object, [predicate=_.identity])",
+   "return": "(Object): Returns the new object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to resolve."
+    },
+    {
+     "desc": "[defaultValue] (*): The value returned for undefined resolved values."
+    }
+   ],
+   "desc": "This method is like _.get except that if the resolved value is a function it's invoked with the this binding of its parent object and its result is returned.",
+   "signature": "_.result(object, path, [defaultValue])",
+   "return": "(*): Returns the resolved value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to modify."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to set."
+    },
+    {
+     "desc": "value (*): The value to set."
+    }
+   ],
+   "desc": "Sets the value at path of object. If a portion of path doesn't exist, it's created. Arrays are created for missing index properties while objects are created for all other missing properties. Use _.setWith to customize path creation.\nNote: This method mutates object.",
+   "signature": "_.set(object, path, value)",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to modify."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to set."
+    },
+    {
+     "desc": "value (*): The value to set."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize assigned values."
+    }
+   ],
+   "desc": "This method is like _.set except that it accepts customizer which is invoked to produce the objects of path. If customizer returns undefined path creation is handled by the method instead. The customizer is invoked with three arguments: (nsValue, key, nsObject).\nNote: This method mutates object.",
+   "signature": "_.setWith(object, path, value, [customizer])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "Creates an array of own enumerable string keyed-value pairs for object which can be consumed by _.fromPairs. If object is a map or set, its entries are returned.",
+   "signature": "_.toPairs(object)",
+   "return": "_.entries"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "Creates an array of own and inherited enumerable string keyed-value pairs for object which can be consumed by _.fromPairs. If object is a map or set, its entries are returned.",
+   "signature": "_.toPairsIn(object)",
+   "return": "_.entriesIn"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to iterate over."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    },
+    {
+     "desc": "[accumulator] (*): The custom accumulator value."
+    }
+   ],
+   "desc": "An alternative to _.reduce; this method transforms object to a new accumulator object which is the result of running each of its own enumerable string keyed properties thru iteratee, with each invocation potentially mutating the accumulator object. If accumulator is not provided, a new object with the same [[Prototype]] will be used. The iteratee is invoked with four arguments: (accumulator, value, key, object). Iteratee functions may exit iteration early by explicitly returning false.",
+   "signature": "_.transform(object, [iteratee=_.identity], [accumulator])",
+   "return": "(*): Returns the accumulated value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to modify."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to unset."
+    }
+   ],
+   "desc": "Removes the property at path of object.\nNote: This method mutates object.",
+   "signature": "_.unset(object, path)",
+   "return": "(boolean): Returns true if the property is deleted, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to modify."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to set."
+    },
+    {
+     "desc": "updater (Function): The function to produce the updated value."
+    }
+   ],
+   "desc": "This method is like _.set except that accepts updater to produce the value to set. Use _.updateWith to customize path creation. The updater is invoked with one argument: (value).\nNote: This method mutates object.",
+   "signature": "_.update(object, path, updater)",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to modify."
+    },
+    {
+     "desc": "path (Array|string): The path of the property to set."
+    },
+    {
+     "desc": "updater (Function): The function to produce the updated value."
+    },
+    {
+     "desc": "[customizer] (Function): The function to customize assigned values."
+    }
+   ],
+   "desc": "This method is like _.update except that it accepts customizer which is invoked to produce the objects of path. If customizer returns undefined path creation is handled by the method instead. The customizer is invoked with three arguments: (nsValue, key, nsObject).\nNote: This method mutates object.",
+   "signature": "_.updateWith(object, path, updater, [customizer])",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "Creates an array of the own enumerable string keyed property values of object.\nNote: Non-object values are coerced to objects.",
+   "signature": "_.values(object)",
+   "return": "(Array): Returns the array of property values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "Creates an array of the own and inherited enumerable string keyed property values of object.\nNote: Non-object values are coerced to objects.",
+   "signature": "_.valuesIn(object)",
+   "return": "(Array): Returns the array of property values."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to wrap in a lodash instance."
+    }
+   ],
+   "desc": "Creates a lodash object which wraps value to enable implicit method chain sequences. Methods that operate on and return arrays, collections, and functions can be chained together. Methods that retrieve a single value or may return a primitive value will automatically end the chain sequence and return the unwrapped value. Otherwise, the value must be unwrapped with _#value.\nExplicit chain sequences, which must be unwrapped with _#value, may be enabled using _.chain.\nThe execution of chained methods is lazy, that is, it's deferred until _#value is implicitly or explicitly called.\nLazy evaluation allows several methods to support shortcut fusion. Shortcut fusion is an optimization to merge iteratee calls; this avoids the creation of intermediate arrays and can greatly reduce the number of iteratee executions. Sections of a chain sequence qualify for shortcut fusion if the section is applied to an array and iteratees accept only one argument. The heuristic for whether a section qualifies for shortcut fusion is subject to change.\nChaining is supported in custom builds as long as the _#value method is directly or indirectly included in the build.\nIn addition to lodash methods, wrappers have Array and String methods.\nThe wrapper Array methods are:\nconcat, join, pop, push, shift, sort, splice, and unshift\nThe wrapper String methods are:\nreplace and split\nThe wrapper methods that support shortcut fusion are:\nat, compact, drop, dropRight, dropWhile, filter, find, findLast, head, initial, last, map, reject, reverse, slice, tail, take, takeRight, takeRightWhile, takeWhile, and toArray\nThe chainable wrapper methods are:\nafter, ary, assign, assignIn, assignInWith, assignWith, at, before, bind, bindAll, bindKey, castArray, chain, chunk, commit, compact, concat, conforms, constant, countBy, create, curry, debounce, defaults, defaultsDeep, defer, delay, difference, differenceBy, differenceWith, drop, dropRight, dropRightWhile, dropWhile, extend, extendWith, fill, filter, flatMap, flatMapDeep, flatMapDepth, flatten, flattenDeep, flattenDepth, flip, flow, flowRight, fromPairs, functions, functionsIn, groupBy, initial, intersection, intersectionBy, intersectionWith, invert, invertBy, invokeMap, iteratee, keyBy, keys, keysIn, map, mapKeys, mapValues, matches, matchesProperty, memoize, merge, mergeWith, method, methodOf, mixin, negate, nthArg, omit, omitBy, once, orderBy, over, overArgs, overEvery, overSome, partial, partialRight, partition, pick, pickBy, plant, property, propertyOf, pull, pullAll, pullAllBy, pullAllWith, pullAt, push, range, rangeRight, rearg, reject, remove, rest, reverse, sampleSize, set, setWith, shuffle, slice, sort, sortBy, splice, spread, tail, take, takeRight, takeRightWhile, takeWhile, tap, throttle, thru, toArray, toPairs, toPairsIn, toPath, toPlainObject, transform, unary, union, unionBy, unionWith, uniq, uniqBy, uniqWith, unset, unshift, unzip, unzipWith, update, updateWith, values, valuesIn, without, wrap, xor, xorBy, xorWith, zip, zipObject, zipObjectDeep, and zipWith\nThe wrapper methods that are not chainable by default are:\nadd, attempt, camelCase, capitalize, ceil, clamp, clone, cloneDeep, cloneDeepWith, cloneWith, conformsTo, deburr, defaultTo, divide, each, eachRight, endsWith, eq, escape, escapeRegExp, every, find, findIndex, findKey, findLast, findLastIndex, findLastKey, first, floor, forEach, forEachRight, forIn, forInRight, forOwn, forOwnRight, get, gt, gte, has, hasIn, head, identity, includes, indexOf, inRange, invoke, isArguments, isArray, isArrayBuffer, isArrayLike, isArrayLikeObject, isBoolean, isBuffer, isDate, isElement, isEmpty, isEqual, isEqualWith, isError, isFinite, isFunction, isInteger, isLength, isMap, isMatch, isMatchWith, isNaN, isNative, isNil, isNull, isNumber, isObject, isObjectLike, isPlainObject, isRegExp, isSafeInteger, isSet, isString, isUndefined, isTypedArray, isWeakMap, isWeakSet, join, kebabCase, last, lastIndexOf, lowerCase, lowerFirst, lt, lte, max, maxBy, mean, meanBy, min, minBy, multiply, noConflict, noop, now, nth, pad, padEnd, padStart, parseInt, pop, random, reduce, reduceRight, repeat, result, round, runInContext, sample, shift, size, snakeCase, some, sortedIndex, sortedIndexBy, sortedLastIndex, sortedLastIndexBy, startCase, startsWith, stubArray, stubFalse, stubObject, stubString, stubTrue, subtract, sum, sumBy, template, times, toFinite, toInteger, toJSON, toLength, toLower, toNumber, toSafeInteger, toString, toUpper, trim, trimEnd, trimStart, truncate, unescape, uniqueId, upperCase, upperFirst, value, and words",
+   "signature": "_(value)"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to wrap."
+    }
+   ],
+   "desc": "Creates a lodash wrapper instance that wraps value with explicit method chain sequences enabled. The result of such sequences must be unwrapped with _#value.",
+   "signature": "_.chain(value)",
+   "return": "(Object): Returns the new lodash wrapper instance."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to provide to interceptor."
+    },
+    {
+     "desc": "interceptor (Function): The function to invoke."
+    }
+   ],
+   "desc": "This method invokes interceptor and returns value. The interceptor is invoked with one argument; (value). The purpose of this method is to \"tap into\" a method chain sequence in order to modify intermediate results.",
+   "signature": "_.tap(value, interceptor)",
+   "return": "(*): Returns value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to provide to interceptor."
+    },
+    {
+     "desc": "interceptor (Function): The function to invoke."
+    }
+   ],
+   "desc": "This method is like _.tap except that it returns the result of interceptor. The purpose of this method is to \"pass thru\" values replacing intermediate results in a method chain sequence.",
+   "signature": "_.thru(value, interceptor)",
+   "return": "(*): Returns the result of interceptor."
+  },
+  {
+   "desc": "Enables the wrapper to be iterable.",
+   "signature": "_.prototype[Symbol.iterator]()",
+   "return": "(Object): Returns the wrapper object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[paths] (...(string|string[])): The property paths to pick."
+    }
+   ],
+   "desc": "This method is the wrapper version of _.at.",
+   "signature": "_.prototype.at([paths])",
+   "return": "(Object): Returns the new lodash wrapper instance."
+  },
+  {
+   "desc": "Creates a lodash wrapper instance with explicit method chain sequences enabled.",
+   "signature": "_.prototype.chain()",
+   "return": "(Object): Returns the new lodash wrapper instance."
+  },
+  {
+   "desc": "Executes the chain sequence and returns the wrapped result.",
+   "signature": "_.prototype.commit()",
+   "return": "(Object): Returns the new lodash wrapper instance."
+  },
+  {
+   "desc": "Gets the next value on a wrapped object following the iterator protocol.",
+   "signature": "_.prototype.next()",
+   "return": "(Object): Returns the next iterator value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to plant."
+    }
+   ],
+   "desc": "Creates a clone of the chain sequence planting value as the wrapped value.",
+   "signature": "_.prototype.plant(value)",
+   "return": "(Object): Returns the new lodash wrapper instance."
+  },
+  {
+   "desc": "This method is the wrapper version of _.reverse.\nNote: This method mutates the wrapped array.",
+   "signature": "_.prototype.reverse()",
+   "return": "(Object): Returns the new lodash wrapper instance."
+  },
+  {
+   "desc": "Executes the chain sequence to resolve the unwrapped value.",
+   "signature": "_.prototype.value()",
+   "return": "_.prototype.toJSON, _.prototype.valueOf"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string to camel case.",
+   "signature": "_.camelCase([string=''])",
+   "return": "(string): Returns the camel cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to capitalize."
+    }
+   ],
+   "desc": "Converts the first character of string to upper case and the remaining to lower case.",
+   "signature": "_.capitalize([string=''])",
+   "return": "(string): Returns the capitalized string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to deburr."
+    }
+   ],
+   "desc": "Deburrs string by converting Latin-1 Supplement and Latin Extended-A letters to basic Latin letters and removing combining diacritical marks.",
+   "signature": "_.deburr([string=''])",
+   "return": "(string): Returns the deburred string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to inspect."
+    },
+    {
+     "desc": "[target] (string): The string to search for."
+    },
+    {
+     "desc": "[position=string.length] (number): The position to search up to."
+    }
+   ],
+   "desc": "Checks if string ends with the given target string.",
+   "signature": "_.endsWith([string=''], [target], [position=string.length])",
+   "return": "(boolean): Returns true if string ends with target, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to escape."
+    }
+   ],
+   "desc": "Converts the characters \"&\", \"<\", \">\", '\"', and \"'\" in string to their corresponding HTML entities.\nNote: No other characters are escaped. To escape additional characters use a third-party library like he.\nThough the \">\" character is escaped for symmetry, characters like \">\" and \"/\" don't need escaping in HTML and have no special meaning unless they're part of a tag or unquoted attribute value. See Mathias Bynens's article (under \"semi-related fun fact\") for more details.\nWhen working with HTML you should always quote attribute values to reduce XSS vectors.",
+   "signature": "_.escape([string=''])",
+   "return": "(string): Returns the escaped string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to escape."
+    }
+   ],
+   "desc": "Escapes the RegExp special characters \"^\", \"$\", \"\", \".\", \"*\", \"+\", \"?\", \"(\", \")\", \"[\", \"]\", \"{\", \"}\", and \"|\" in string.",
+   "signature": "_.escapeRegExp([string=''])",
+   "return": "(string): Returns the escaped string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string to kebab case.",
+   "signature": "_.kebabCase([string=''])",
+   "return": "(string): Returns the kebab cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string, as space separated words, to lower case.",
+   "signature": "_.lowerCase([string=''])",
+   "return": "(string): Returns the lower cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts the first character of string to lower case.",
+   "signature": "_.lowerFirst([string=''])",
+   "return": "(string): Returns the converted string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to pad."
+    },
+    {
+     "desc": "[length=0] (number): The padding length."
+    },
+    {
+     "desc": "[chars=' '] (string): The string used as padding."
+    }
+   ],
+   "desc": "Pads string on the left and right sides if it's shorter than length. Padding characters are truncated if they can't be evenly divided by length.",
+   "signature": "_.pad([string=''], [length=0], [chars=' '])",
+   "return": "(string): Returns the padded string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to pad."
+    },
+    {
+     "desc": "[length=0] (number): The padding length."
+    },
+    {
+     "desc": "[chars=' '] (string): The string used as padding."
+    }
+   ],
+   "desc": "Pads string on the right side if it's shorter than length. Padding characters are truncated if they exceed length.",
+   "signature": "_.padEnd([string=''], [length=0], [chars=' '])",
+   "return": "(string): Returns the padded string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to pad."
+    },
+    {
+     "desc": "[length=0] (number): The padding length."
+    },
+    {
+     "desc": "[chars=' '] (string): The string used as padding."
+    }
+   ],
+   "desc": "Pads string on the left side if it's shorter than length. Padding characters are truncated if they exceed length.",
+   "signature": "_.padStart([string=''], [length=0], [chars=' '])",
+   "return": "(string): Returns the padded string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "string (string): The string to convert."
+    },
+    {
+     "desc": "[radix=10] (number): The radix to interpret value by."
+    }
+   ],
+   "desc": "Converts string to an integer of the specified radix. If radix is undefined or 0, a radix of 10 is used unless value is a hexadecimal, in which case a radix of 16 is used.\nNote: This method aligns with the ES5 implementation of parseInt.",
+   "signature": "_.parseInt(string, [radix=10])",
+   "return": "(number): Returns the converted integer."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to repeat."
+    },
+    {
+     "desc": "[n=1] (number): The number of times to repeat the string."
+    }
+   ],
+   "desc": "Repeats the given string n times.",
+   "signature": "_.repeat([string=''], [n=1])",
+   "return": "(string): Returns the repeated string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to modify."
+    },
+    {
+     "desc": "pattern (RegExp|string): The pattern to replace."
+    },
+    {
+     "desc": "replacement (Function|string): The match replacement."
+    }
+   ],
+   "desc": "Replaces matches for pattern in string with replacement.\nNote: This method is based on String#replace.",
+   "signature": "_.replace([string=''], pattern, replacement)",
+   "return": "(string): Returns the modified string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string to snake case.",
+   "signature": "_.snakeCase([string=''])",
+   "return": "(string): Returns the snake cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to split."
+    },
+    {
+     "desc": "separator (RegExp|string): The separator pattern to split by."
+    },
+    {
+     "desc": "[limit] (number): The length to truncate results to."
+    }
+   ],
+   "desc": "Splits string by separator.\nNote: This method is based on String#split.",
+   "signature": "_.split([string=''], separator, [limit])",
+   "return": "(Array): Returns the string segments."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string to start case.",
+   "signature": "_.startCase([string=''])",
+   "return": "(string): Returns the start cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to inspect."
+    },
+    {
+     "desc": "[target] (string): The string to search for."
+    },
+    {
+     "desc": "[position=0] (number): The position to search from."
+    }
+   ],
+   "desc": "Checks if string starts with the given target string.",
+   "signature": "_.startsWith([string=''], [target], [position=0])",
+   "return": "(boolean): Returns true if string starts with target, else false."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The template string."
+    },
+    {
+     "desc": "[options={}] (Object): The options object."
+    },
+    {
+     "desc": "[options.escape=_.templateSettings.escape] (RegExp): The HTML \"escape\" delimiter."
+    },
+    {
+     "desc": "[options.evaluate=_.templateSettings.evaluate] (RegExp): The \"evaluate\" delimiter."
+    },
+    {
+     "desc": "[options.imports=_.templateSettings.imports] (Object): An object to import into the template as free variables."
+    },
+    {
+     "desc": "[options.interpolate=_.templateSettings.interpolate] (RegExp): The \"interpolate\" delimiter."
+    },
+    {
+     "desc": "[options.sourceURL='lodash.templateSources[n]'] (string): The sourceURL of the compiled template."
+    },
+    {
+     "desc": "[options.variable='obj'] (string): The data object variable name."
+    }
+   ],
+   "desc": "Creates a compiled template function that can interpolate data properties in \"interpolate\" delimiters, HTML-escape interpolated data properties in \"escape\" delimiters, and execute JavaScript in \"evaluate\" delimiters. Data properties may be accessed as free variables in the template. If a setting object is given, it takes precedence over _.templateSettings values.\nNote: In the development build _.template utilizes sourceURLs for easier debugging.\nFor more information on precompiling templates see lodash's custom builds documentation.\nFor more information on Chrome extension sandboxes see Chrome's extensions documentation.",
+   "signature": "_.template([string=''], [options={}])",
+   "return": "(Function): Returns the compiled template function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string, as a whole, to lower case just like String#toLowerCase.",
+   "signature": "_.toLower([string=''])",
+   "return": "(string): Returns the lower cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string, as a whole, to upper case just like String#toUpperCase.",
+   "signature": "_.toUpper([string=''])",
+   "return": "(string): Returns the upper cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to trim."
+    },
+    {
+     "desc": "[chars=whitespace] (string): The characters to trim."
+    }
+   ],
+   "desc": "Removes leading and trailing whitespace or specified characters from string.",
+   "signature": "_.trim([string=''], [chars=whitespace])",
+   "return": "(string): Returns the trimmed string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to trim."
+    },
+    {
+     "desc": "[chars=whitespace] (string): The characters to trim."
+    }
+   ],
+   "desc": "Removes trailing whitespace or specified characters from string.",
+   "signature": "_.trimEnd([string=''], [chars=whitespace])",
+   "return": "(string): Returns the trimmed string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to trim."
+    },
+    {
+     "desc": "[chars=whitespace] (string): The characters to trim."
+    }
+   ],
+   "desc": "Removes leading whitespace or specified characters from string.",
+   "signature": "_.trimStart([string=''], [chars=whitespace])",
+   "return": "(string): Returns the trimmed string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to truncate."
+    },
+    {
+     "desc": "[options={}] (Object): The options object."
+    },
+    {
+     "desc": "[options.length=30] (number): The maximum string length."
+    },
+    {
+     "desc": "[options.omission='...'] (string): The string to indicate text is omitted."
+    },
+    {
+     "desc": "[options.separator] (RegExp|string): The separator pattern to truncate to."
+    }
+   ],
+   "desc": "Truncates string if it's longer than the given maximum string length. The last characters of the truncated string are replaced with the omission string which defaults to \"...\".",
+   "signature": "_.truncate([string=''], [options={}])",
+   "return": "(string): Returns the truncated string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to unescape."
+    }
+   ],
+   "desc": "The inverse of _.escape; this method converts the HTML entities &amp;, &lt;, &gt;, &quot;, and &#39; in string to their corresponding characters.\nNote: No other HTML entities are unescaped. To unescape additional HTML entities use a third-party library like he.",
+   "signature": "_.unescape([string=''])",
+   "return": "(string): Returns the unescaped string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts string, as space separated words, to upper case.",
+   "signature": "_.upperCase([string=''])",
+   "return": "(string): Returns the upper cased string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to convert."
+    }
+   ],
+   "desc": "Converts the first character of string to upper case.",
+   "signature": "_.upperFirst([string=''])",
+   "return": "(string): Returns the converted string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[string=''] (string): The string to inspect."
+    },
+    {
+     "desc": "[pattern] (RegExp|string): The pattern to match words."
+    }
+   ],
+   "desc": "Splits string into an array of its words.",
+   "signature": "_.words([string=''], [pattern])",
+   "return": "(Array): Returns the words of string."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "func (Function): The function to attempt."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke func with."
+    }
+   ],
+   "desc": "Attempts to invoke func, returning either the result or the caught error object. Any additional arguments are provided to func when it's invoked.",
+   "signature": "_.attempt(func, [args])",
+   "return": "(*): Returns the func result or error object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to bind and assign the bound methods to."
+    },
+    {
+     "desc": "methodNames (...(string|string[])): The object method names to bind."
+    }
+   ],
+   "desc": "Binds methods of an object to the object itself, overwriting the existing method.\nNote: This method doesn't set the \"length\" property of bound functions.",
+   "signature": "_.bindAll(object, methodNames)",
+   "return": "(Object): Returns object."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "pairs (Array): The predicate-function pairs."
+    }
+   ],
+   "desc": "Creates a function that iterates over pairs and invokes the corresponding function of the first predicate to return truthy. The predicate-function pairs are invoked with the this binding and arguments of the created function.",
+   "signature": "_.cond(pairs)",
+   "return": "(Function): Returns the new composite function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "source (Object): The object of property predicates to conform to."
+    }
+   ],
+   "desc": "Creates a function that invokes the predicate properties of source with the corresponding property values of a given object, returning true if all predicates return truthy, else false.\nNote: The created function is equivalent to _.conformsTo with source partially applied.",
+   "signature": "_.conforms(source)",
+   "return": "(Function): Returns the new spec function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to return from the new function."
+    }
+   ],
+   "desc": "Creates a function that returns value.",
+   "signature": "_.constant(value)",
+   "return": "(Function): Returns the new constant function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to check."
+    },
+    {
+     "desc": "defaultValue (*): The default value."
+    }
+   ],
+   "desc": "Checks value to determine whether a default value should be returned in its place. The defaultValue is returned if value is NaN, null, or undefined.",
+   "signature": "_.defaultTo(value, defaultValue)",
+   "return": "(*): Returns the resolved value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[funcs] (...(Function|Function[])): The functions to invoke."
+    }
+   ],
+   "desc": "Creates a function that returns the result of invoking the given functions with the this binding of the created function, where each successive invocation is supplied the return value of the previous.",
+   "signature": "_.flow([funcs])",
+   "return": "(Function): Returns the new composite function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[funcs] (...(Function|Function[])): The functions to invoke."
+    }
+   ],
+   "desc": "This method is like _.flow except that it creates a function that invokes the given functions from right to left.",
+   "signature": "_.flowRight([funcs])",
+   "return": "(Function): Returns the new composite function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): Any value."
+    }
+   ],
+   "desc": "This method returns the first argument it receives.",
+   "signature": "_.identity(value)",
+   "return": "(*): Returns value."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[func=_.identity] (*): The value to convert to a callback."
+    }
+   ],
+   "desc": "Creates a function that invokes func with the arguments of the created function. If func is a property name, the created function returns the property value for a given element. If func is an array or object, the created function returns true for elements that contain the equivalent source properties, otherwise it returns false.",
+   "signature": "_.iteratee([func=_.identity])",
+   "return": "(Function): Returns the callback."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "source (Object): The object of property values to match."
+    }
+   ],
+   "desc": "Creates a function that performs a partial deep comparison between a given object and source, returning true if the given object has equivalent property values, else false.\nNote: The created function is equivalent to _.isMatch with source partially applied.\nPartial comparisons will match empty array and empty object source values against any array or object value, respectively. See _.isEqual for a list of supported value comparisons.",
+   "signature": "_.matches(source)",
+   "return": "(Function): Returns the new spec function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "path (Array|string): The path of the property to get."
+    },
+    {
+     "desc": "srcValue (*): The value to match."
+    }
+   ],
+   "desc": "Creates a function that performs a partial deep comparison between the value at path of a given object to srcValue, returning true if the object value is equivalent, else false.\nNote: Partial comparisons will match empty array and empty object srcValue values against any array or object value, respectively. See _.isEqual for a list of supported value comparisons.",
+   "signature": "_.matchesProperty(path, srcValue)",
+   "return": "(Function): Returns the new spec function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "path (Array|string): The path of the method to invoke."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke the method with."
+    }
+   ],
+   "desc": "Creates a function that invokes the method at path of a given object. Any additional arguments are provided to the invoked method.",
+   "signature": "_.method(path, [args])",
+   "return": "(Function): Returns the new invoker function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    },
+    {
+     "desc": "[args] (...*): The arguments to invoke the method with."
+    }
+   ],
+   "desc": "The opposite of _.method; this method creates a function that invokes the method at a given path of object. Any additional arguments are provided to the invoked method.",
+   "signature": "_.methodOf(object, [args])",
+   "return": "(Function): Returns the new invoker function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[object=lodash] (Function|Object): The destination object."
+    },
+    {
+     "desc": "source (Object): The object of functions to add."
+    },
+    {
+     "desc": "[options={}] (Object): The options object."
+    },
+    {
+     "desc": "[options.chain=true] (boolean): Specify whether mixins are chainable."
+    }
+   ],
+   "desc": "Adds all own enumerable string keyed function properties of a source object to the destination object. If object is a function, then methods are added to its prototype as well.\nNote: Use _.runInContext to create a pristine lodash function to avoid conflicts caused by modifying the original.",
+   "signature": "_.mixin([object=lodash], source, [options={}])",
+   "return": "(*): Returns object."
+  },
+  {
+   "desc": "Reverts the _ variable to its previous value and returns a reference to the lodash function.",
+   "signature": "_.noConflict()",
+   "return": "(Function): Returns the lodash function."
+  },
+  {
+   "desc": "This method returns undefined.",
+   "signature": "_.noop()"
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[n=0] (number): The index of the argument to return."
+    }
+   ],
+   "desc": "Creates a function that gets the argument at index n. If n is negative, the nth argument from the end is returned.",
+   "signature": "_.nthArg([n=0])",
+   "return": "(Function): Returns the new pass-thru function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[iteratees=[_.identity]] (...(Function|Function[])): The iteratees to invoke."
+    }
+   ],
+   "desc": "Creates a function that invokes iteratees with the arguments it receives and returns their results.",
+   "signature": "_.over([iteratees=[_.identity]])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[predicates=[_.identity]] (...(Function|Function[])): The predicates to check."
+    }
+   ],
+   "desc": "Creates a function that checks if all of the predicates return truthy when invoked with the arguments it receives.",
+   "signature": "_.overEvery([predicates=[_.identity]])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[predicates=[_.identity]] (...(Function|Function[])): The predicates to check."
+    }
+   ],
+   "desc": "Creates a function that checks if any of the predicates return truthy when invoked with the arguments it receives.",
+   "signature": "_.overSome([predicates=[_.identity]])",
+   "return": "(Function): Returns the new function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "path (Array|string): The path of the property to get."
+    }
+   ],
+   "desc": "Creates a function that returns the value at path of a given object.",
+   "signature": "_.property(path)",
+   "return": "(Function): Returns the new accessor function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "object (Object): The object to query."
+    }
+   ],
+   "desc": "The opposite of _.property; this method creates a function that returns the value at a given path of object.",
+   "signature": "_.propertyOf(object)",
+   "return": "(Function): Returns the new accessor function."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[start=0] (number): The start of the range."
+    },
+    {
+     "desc": "end (number): The end of the range."
+    },
+    {
+     "desc": "[step=1] (number): The value to increment or decrement by."
+    }
+   ],
+   "desc": "Creates an array of numbers (positive and/or negative) progressing from start up to, but not including, end. A step of -1 is used if a negative start is specified without an end or step. If end is not specified, it's set to start with start then set to 0.\nNote: JavaScript follows the IEEE-754 standard for resolving floating-point values which can produce unexpected results.",
+   "signature": "_.range([start=0], end, [step=1])",
+   "return": "(Array): Returns the range of numbers."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[start=0] (number): The start of the range."
+    },
+    {
+     "desc": "end (number): The end of the range."
+    },
+    {
+     "desc": "[step=1] (number): The value to increment or decrement by."
+    }
+   ],
+   "desc": "This method is like _.range except that it populates values in descending order.",
+   "signature": "_.rangeRight([start=0], end, [step=1])",
+   "return": "(Array): Returns the range of numbers."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[context=root] (Object): The context object."
+    }
+   ],
+   "desc": "Create a new pristine lodash function using the context object.",
+   "signature": "_.runInContext([context=root])",
+   "return": "(Function): Returns a new lodash function."
+  },
+  {
+   "desc": "This method returns a new empty array.",
+   "signature": "_.stubArray()",
+   "return": "(Array): Returns the new empty array."
+  },
+  {
+   "desc": "This method returns false.",
+   "signature": "_.stubFalse()",
+   "return": "(boolean): Returns false."
+  },
+  {
+   "desc": "This method returns a new empty object.",
+   "signature": "_.stubObject()",
+   "return": "(Object): Returns the new empty object."
+  },
+  {
+   "desc": "This method returns an empty string.",
+   "signature": "_.stubString()",
+   "return": "(string): Returns the empty string."
+  },
+  {
+   "desc": "This method returns true.",
+   "signature": "_.stubTrue()",
+   "return": "(boolean): Returns true."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "n (number): The number of times to invoke iteratee."
+    },
+    {
+     "desc": "[iteratee=_.identity] (Function): The function invoked per iteration."
+    }
+   ],
+   "desc": "Invokes the iteratee n times, returning an array of the results of each invocation. The iteratee is invoked with one argument; (index).",
+   "signature": "_.times(n, [iteratee=_.identity])",
+   "return": "(Array): Returns the array of results."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "value (*): The value to convert."
+    }
+   ],
+   "desc": "Converts value to a property path array.",
+   "signature": "_.toPath(value)",
+   "return": "(Array): Returns the new property path array."
+  },
+  {
+   "parameters": [
+    {
+     "desc": "[prefix=''] (string): The value to prefix the ID with."
+    }
+   ],
+   "desc": "Generates a unique ID. If prefix is given, the ID is appended to it.",
+   "signature": "_.uniqueId([prefix=''])",
+   "return": "(string): Returns the unique ID."
+  }
+ ]
+}

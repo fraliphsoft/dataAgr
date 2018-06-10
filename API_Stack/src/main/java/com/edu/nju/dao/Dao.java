@@ -66,7 +66,7 @@ public class Dao {
         Session session = getSession();
         session.beginTransaction();
 
-        String hql = "FROM Method m where m.lib_name LIKE '%" + libName + "%'";
+        String hql = "FROM Method m where m.lib_name LIKE '%" + libName + "%' ORDER BY length(m.class)";
 
         Query query = session.createQuery(hql);
 
