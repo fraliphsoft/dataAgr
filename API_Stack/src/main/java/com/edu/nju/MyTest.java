@@ -2,6 +2,7 @@ package com.edu.nju;
 
 import com.edu.nju.dao.Dao;
 import com.edu.nju.model.Example;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import com.edu.nju.model.Method;
 import org.junit.runner.RunWith;
 import org.junit.Test;

@@ -1,5 +1,4 @@
 package com.edu.nju.data.datamatch.model;
-
 public class Methods {
 
     private long mid;
