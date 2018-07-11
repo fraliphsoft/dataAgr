@@ -65,10 +65,11 @@ public class Dao {
     public List<Method> getMethodList(String libName) {
         Session session = getSession();
         session.beginTransaction();
-
         String hql = "FROM Method m where m.lib_name LIKE '%" + libName + "%' ORDER BY length(m.method_class)";
 
+        if (libName.equals("lodash")) hql = "FROM Method m where m.lib_name LIKE '%" + libName + "%' ORDER BY length(m.lib_name) DESC";
         Query query = session.createQuery(hql);
+
 
         List<Method> res = query.list();
         session.close();
